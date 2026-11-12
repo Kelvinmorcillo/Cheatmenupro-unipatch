@@ -1,0 +1,199 @@
+{
+  "format": "Native Victoria 3 compatibility add-on; no executables and no shell installer",
+  "requires": [
+    "Victoria 3 1.13.x",
+    "UNIPOLAR",
+    "Original Cheat Menu Pro 3717461054 enabled"
+  ],
+  "unipolar_source_commit": "89cec3c802816dace0720b9f21d08740643996cb",
+  "original_gui_sha256": "fc9cd001ba7760716d6d5660d41531bdcb402e2cc857fccb8318efa39c2e8987",
+  "patched_gui_sha256": "01ba5f32b79d5bf5451d1a26f2a0832572d68b066d405da916ad598bce2b5f87",
+  "scripted_gui_bindings": {
+    "sakuya_b1_fast_construction_check": "cmpu_fast_check",
+    "sakuya_b1_fast_construction_abs_check": "cmpu_cap_check",
+    "sakuya_b1_fast_construction_add": "cmpu_fast_add",
+    "sakuya_b1_fast_construction_add_shift": "cmpu_fast_add_shift",
+    "sakuya_b1_fast_construction_add_alt": "cmpu_fast_add_alt",
+    "sakuya_b1_fast_construction_sub": "cmpu_fast_sub",
+    "sakuya_b1_fast_construction_clear": "cmpu_fast_clear",
+    "sakuya_b1_fast_construction_clear_all": "cmpu_fast_clear_all",
+    "sakuya_b1_fast_construction_abs_add": "cmpu_cap_toggle",
+    "sakuya_b1_private_construction_1000": "cmpu_quick_private_up",
+    "sakuya_b1_private_construction_minus_10000": "cmpu_quick_private_down",
+    "sakuya_b2_construction_cost_check": "cmpu_cost_check",
+    "sakuya_b2_construction_cost_add": "cmpu_cost_add",
+    "sakuya_b2_construction_cost_add_shift": "cmpu_cost_add_shift",
+    "sakuya_b2_construction_cost_add_alt": "cmpu_cost_add_alt",
+    "sakuya_b2_construction_cost_sub": "cmpu_cost_sub",
+    "sakuya_b2_construction_cost_clear": "cmpu_cost_clear",
+    "sakuya_b2_private_construction_check": "cmpu_private_check",
+    "sakuya_b2_private_construction_add": "cmpu_private_add",
+    "sakuya_b2_private_construction_add_shift": "cmpu_private_add_shift",
+    "sakuya_b2_private_construction_add_alt": "cmpu_private_add_alt",
+    "sakuya_b2_private_construction_sub": "cmpu_private_sub",
+    "sakuya_b2_private_construction_clear": "cmpu_private_clear",
+    "sakuya_b6_build_can_confirm_check": "cmpu_build_can_confirm_check",
+    "sakuya_b6_build_confirm_player": "cmpu_build_confirm_player",
+    "sakuya_b6_build_confirm_player_integrated": "cmpu_build_confirm_integrated",
+    "sakuya_b6_build_confirm_marked": "cmpu_build_confirm_marked",
+    "sakuya_b6_build_potential_player": "cmpu_build_potential_player",
+    "sakuya_b6_build_potential_player_integrated": "cmpu_build_potential_player_integrated",
+    "sakuya_b6_build_potential_marked": "cmpu_build_potential_marked"
+  },
+  "new_picker_buildings": [
+    "war_machine_industry",
+    "chip_industry",
+    "computer_industry",
+    "appliance_manufactory",
+    "aeronautics_industry",
+    "army_logistics_center",
+    "nuclear_plant",
+    "green_plant",
+    "airport",
+    "spaceport",
+    "telecommunications",
+    "professional_service",
+    "bank",
+    "food_service",
+    "retail_services",
+    "advertising_agency",
+    "warehouse",
+    "pharmaceutical_services",
+    "software_industry",
+    "nuclear_silo",
+    "ouro_preto",
+    "teatro_amazonas",
+    "brasilia",
+    "world_trade_center"
+  ],
+  "building_map": {
+    "war_machine_industry": {
+      "group": "bg_heavy_industry",
+      "icon": "gfx/interface/icons/building_icons/war_industry.dds",
+      "category": "urban"
+    },
+    "chip_industry": {
+      "group": "bg_heavy_industry",
+      "icon": "gfx/interface/icons/building_icons/microchip_factory.dds",
+      "category": "urban"
+    },
+    "computer_industry": {
+      "group": "bg_heavy_industry",
+      "icon": "gfx/interface/icons/building_icons/computer_industry.dds",
+      "category": "urban"
+    },
+    "appliance_manufactory": {
+      "group": "bg_heavy_industry",
+      "icon": "gfx/interface/icons/building_icons/appliance_manufactory.dds",
+      "category": "urban"
+    },
+    "aeronautics_industry": {
+      "group": "bg_heavy_industry",
+      "icon": "gfx/interface/icons/building_icons/vehicles_industry.dds",
+      "category": "urban"
+    },
+    "army_logistics_center": {
+      "group": "bg_army_logistics_center",
+      "icon": "gfx/interface/icons/building_icons/building_army_logistics_center.dds",
+      "category": "development"
+    },
+    "nuclear_plant": {
+      "group": "bg_power",
+      "icon": "gfx/interface/icons/building_icons/nuclear_plant.dds",
+      "category": "development"
+    },
+    "green_plant": {
+      "group": "bg_power",
+      "icon": "gfx/interface/icons/building_icons/green_power.dds",
+      "category": "development"
+    },
+    "airport": {
+      "group": "bg_power",
+      "icon": "gfx/interface/icons/building_icons/airport.dds",
+      "category": "development"
+    },
+    "spaceport": {
+      "group": "bg_technology",
+      "icon": "gfx/interface/icons/building_icons/spaceport.dds",
+      "category": "development"
+    },
+    "telecommunications": {
+      "group": "bg_private_infrastructure",
+      "icon": "gfx/interface/icons/building_icons/telecommunications_infrastructure.dds",
+      "category": "development"
+    },
+    "professional_service": {
+      "group": "bg_services",
+      "icon": "gfx/interface/icons/building_icons/professional_service.dds",
+      "category": "urban"
+    },
+    "bank": {
+      "group": "bg_banking",
+      "icon": "gfx/interface/icons/building_icons/commercial_bank.dds",
+      "category": "urban"
+    },
+    "food_service": {
+      "group": "bg_services",
+      "icon": "gfx/interface/icons/building_icons/food_retailer.dds",
+      "category": "urban"
+    },
+    "retail_services": {
+      "group": "bg_services",
+      "icon": "gfx/interface/icons/building_icons/hardware_retailer.dds",
+      "category": "urban"
+    },
+    "advertising_agency": {
+      "group": "bg_services",
+      "icon": "gfx/interface/icons/building_icons/building_advertising.dds",
+      "category": "urban"
+    },
+    "warehouse": {
+      "group": "bg_services",
+      "icon": "gfx/interface/icons/building_icons/warehouse.dds",
+      "category": "urban"
+    },
+    "pharmaceutical_services": {
+      "group": "bg_services",
+      "icon": "gfx/interface/icons/building_icons/healthcare_services.dds",
+      "category": "urban"
+    },
+    "software_industry": {
+      "group": "bg_services",
+      "icon": "gfx/interface/icons/building_icons/software_industry.dds",
+      "category": "urban"
+    },
+    "nuclear_silo": {
+      "group": "bg_missile_silo",
+      "icon": "gfx/interface/icons/building_icons/nuclear_silo.dds",
+      "category": "development"
+    },
+    "ouro_preto": {
+      "group": "bg_monuments",
+      "icon": "gfx/interface/icons/building_icons/gold_mine.dds",
+      "category": "urban_special"
+    },
+    "teatro_amazonas": {
+      "group": "bg_monuments",
+      "icon": "gfx/interface/icons/building_icons/building_arts_academy.dds",
+      "category": "urban_special"
+    },
+    "brasilia": {
+      "group": "bg_monuments",
+      "icon": "gfx/interface/icons/building_icons/building_government_administration.dds",
+      "category": "urban_special"
+    },
+    "world_trade_center": {
+      "group": "bg_monuments",
+      "icon": "gfx/interface/icons/building_icons/world_trade_center.dds",
+      "category": "urban_special"
+    }
+  },
+  "tech_policy": "Original Cheat Menu Pro technology callbacks retained unchanged; no missing technology references were found in supplied error logs.",
+  "validation": "Static checks only. Game executable not available in build environment; no runtime playtest claimed.",
+  "limitations": [
+    "Compatibility add-on, not a standalone replacement. Original Cheat Menu Pro stays enabled.",
+    "Original unrelated controls remain inherited, including marked-country economy arrows.",
+    "Building-group efficiency is enabled only for UNIPOLAR groups that already declare construction_efficiency_modifier.",
+    "No new resource-potential buildings were added, so resource-potential behavior remains original."
+  ]
+}

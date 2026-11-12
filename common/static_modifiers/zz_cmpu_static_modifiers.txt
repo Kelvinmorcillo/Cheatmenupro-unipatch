@@ -1,0 +1,24 @@
+﻿cmpu_fast_efficiency = {
+ icon = "gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds"
+ state_construction_mult = 0.1
+}
+
+cmpu_project_limit = {
+ icon = "gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds"
+ country_max_weekly_construction_progress_add = 1000
+}
+
+cmpu_goods_cost = {
+ icon = "gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds"
+ country_construction_goods_cost_mult = -0.1
+}
+
+cmpu_private_share = {
+ icon = "gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds"
+ country_private_construction_allocation_mult = 0.1
+}
+
+cmpu_construction_output = {
+ icon = "gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds"
+ country_construction_add = 100
+}

@@ -1,0 +1,760 @@
+﻿cmpu_fast_check = {
+ scope = country
+ is_shown = { has_modifier = cmpu_fast_efficiency }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+
+ }
+}
+
+cmpu_cap_check = {
+ scope = country
+ is_shown = { has_modifier = cmpu_project_limit }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+
+ }
+}
+
+cmpu_fast_add = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+if = { limit = { NOT = { has_variable = cmpu_fast_steps } } set_variable = { name = cmpu_fast_steps value = 0 } }
+change_variable = { name = cmpu_fast_steps add = 1 }
+clamp_variable = { name = cmpu_fast_steps min = 0 max = 10000 }
+remove_modifier = cmpu_fast_efficiency
+if = { limit = { NOT = { var:cmpu_fast_steps = 0 } } add_modifier = { name = cmpu_fast_efficiency multiplier = var:cmpu_fast_steps } }
+ }
+}
+
+cmpu_fast_add_shift = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+if = { limit = { NOT = { has_variable = cmpu_fast_steps } } set_variable = { name = cmpu_fast_steps value = 0 } }
+change_variable = { name = cmpu_fast_steps add = 10 }
+clamp_variable = { name = cmpu_fast_steps min = 0 max = 10000 }
+remove_modifier = cmpu_fast_efficiency
+if = { limit = { NOT = { var:cmpu_fast_steps = 0 } } add_modifier = { name = cmpu_fast_efficiency multiplier = var:cmpu_fast_steps } }
+ }
+}
+
+cmpu_fast_add_alt = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+if = { limit = { NOT = { has_variable = cmpu_fast_steps } } set_variable = { name = cmpu_fast_steps value = 0 } }
+change_variable = { name = cmpu_fast_steps add = 100 }
+clamp_variable = { name = cmpu_fast_steps min = 0 max = 10000 }
+remove_modifier = cmpu_fast_efficiency
+if = { limit = { NOT = { var:cmpu_fast_steps = 0 } } add_modifier = { name = cmpu_fast_efficiency multiplier = var:cmpu_fast_steps } }
+ }
+}
+
+cmpu_fast_sub = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+if = { limit = { NOT = { has_variable = cmpu_fast_steps } } set_variable = { name = cmpu_fast_steps value = 0 } }
+change_variable = { name = cmpu_fast_steps add = -1 }
+clamp_variable = { name = cmpu_fast_steps min = 0 max = 10000 }
+remove_modifier = cmpu_fast_efficiency
+if = { limit = { NOT = { var:cmpu_fast_steps = 0 } } add_modifier = { name = cmpu_fast_efficiency multiplier = var:cmpu_fast_steps } }
+ }
+}
+
+cmpu_fast_clear = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+remove_modifier = cmpu_fast_efficiency
+remove_variable = cmpu_fast_steps
+remove_modifier = cmpu_project_limit
+ }
+}
+
+cmpu_fast_clear_all = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+remove_modifier = cmpu_fast_efficiency
+remove_variable = cmpu_fast_steps
+remove_modifier = cmpu_project_limit
+ }
+}
+
+cmpu_cap_toggle = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+if = { limit = { has_modifier = cmpu_project_limit } remove_modifier = cmpu_project_limit } else = { add_modifier = cmpu_project_limit }
+ }
+}
+
+cmpu_quick_private_up = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+if = { limit = { NOT = { has_variable = cmpu_private_steps } } set_variable = { name = cmpu_private_steps value = 0 } }
+change_variable = { name = cmpu_private_steps add = 1 }
+clamp_variable = { name = cmpu_private_steps min = -10 max = 10 }
+remove_modifier = cmpu_private_share
+if = { limit = { NOT = { var:cmpu_private_steps = 0 } } add_modifier = { name = cmpu_private_share multiplier = var:cmpu_private_steps } }
+ }
+}
+
+cmpu_quick_private_down = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+if = { limit = { NOT = { has_variable = cmpu_private_steps } } set_variable = { name = cmpu_private_steps value = 0 } }
+change_variable = { name = cmpu_private_steps add = -1 }
+clamp_variable = { name = cmpu_private_steps min = -10 max = 10 }
+remove_modifier = cmpu_private_share
+if = { limit = { NOT = { var:cmpu_private_steps = 0 } } add_modifier = { name = cmpu_private_share multiplier = var:cmpu_private_steps } }
+ }
+}
+
+cmpu_cost_check = {
+ scope = country
+ is_shown = { has_modifier = cmpu_goods_cost }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+
+ }
+}
+
+cmpu_cost_add = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+if = { limit = { NOT = { has_variable = cmpu_cost_steps } } set_variable = { name = cmpu_cost_steps value = 0 } }
+change_variable = { name = cmpu_cost_steps add = -1 }
+clamp_variable = { name = cmpu_cost_steps min = 0 max = 10 }
+remove_modifier = cmpu_goods_cost
+if = { limit = { NOT = { var:cmpu_cost_steps = 0 } } add_modifier = { name = cmpu_goods_cost multiplier = var:cmpu_cost_steps } }
+ }
+}
+
+cmpu_cost_add_shift = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+if = { limit = { NOT = { has_variable = cmpu_cost_steps } } set_variable = { name = cmpu_cost_steps value = 0 } }
+change_variable = { name = cmpu_cost_steps add = -10 }
+clamp_variable = { name = cmpu_cost_steps min = 0 max = 10 }
+remove_modifier = cmpu_goods_cost
+if = { limit = { NOT = { var:cmpu_cost_steps = 0 } } add_modifier = { name = cmpu_goods_cost multiplier = var:cmpu_cost_steps } }
+ }
+}
+
+cmpu_cost_add_alt = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+if = { limit = { NOT = { has_variable = cmpu_cost_steps } } set_variable = { name = cmpu_cost_steps value = 0 } }
+change_variable = { name = cmpu_cost_steps add = -100 }
+clamp_variable = { name = cmpu_cost_steps min = 0 max = 10 }
+remove_modifier = cmpu_goods_cost
+if = { limit = { NOT = { var:cmpu_cost_steps = 0 } } add_modifier = { name = cmpu_goods_cost multiplier = var:cmpu_cost_steps } }
+ }
+}
+
+cmpu_cost_sub = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+if = { limit = { NOT = { has_variable = cmpu_cost_steps } } set_variable = { name = cmpu_cost_steps value = 0 } }
+change_variable = { name = cmpu_cost_steps add = 1 }
+clamp_variable = { name = cmpu_cost_steps min = 0 max = 10 }
+remove_modifier = cmpu_goods_cost
+if = { limit = { NOT = { var:cmpu_cost_steps = 0 } } add_modifier = { name = cmpu_goods_cost multiplier = var:cmpu_cost_steps } }
+ }
+}
+
+cmpu_cost_clear = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+remove_modifier = cmpu_goods_cost
+remove_variable = cmpu_cost_steps
+ }
+}
+
+cmpu_private_check = {
+ scope = country
+ is_shown = { has_modifier = cmpu_private_share }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+
+ }
+}
+
+cmpu_private_add = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+if = { limit = { NOT = { has_variable = cmpu_private_steps } } set_variable = { name = cmpu_private_steps value = 0 } }
+change_variable = { name = cmpu_private_steps add = 1 }
+clamp_variable = { name = cmpu_private_steps min = -10 max = 10 }
+remove_modifier = cmpu_private_share
+if = { limit = { NOT = { var:cmpu_private_steps = 0 } } add_modifier = { name = cmpu_private_share multiplier = var:cmpu_private_steps } }
+ }
+}
+
+cmpu_private_add_shift = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+if = { limit = { NOT = { has_variable = cmpu_private_steps } } set_variable = { name = cmpu_private_steps value = 0 } }
+change_variable = { name = cmpu_private_steps add = 10 }
+clamp_variable = { name = cmpu_private_steps min = -10 max = 10 }
+remove_modifier = cmpu_private_share
+if = { limit = { NOT = { var:cmpu_private_steps = 0 } } add_modifier = { name = cmpu_private_share multiplier = var:cmpu_private_steps } }
+ }
+}
+
+cmpu_private_add_alt = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+if = { limit = { NOT = { has_variable = cmpu_private_steps } } set_variable = { name = cmpu_private_steps value = 0 } }
+change_variable = { name = cmpu_private_steps add = 100 }
+clamp_variable = { name = cmpu_private_steps min = -10 max = 10 }
+remove_modifier = cmpu_private_share
+if = { limit = { NOT = { var:cmpu_private_steps = 0 } } add_modifier = { name = cmpu_private_share multiplier = var:cmpu_private_steps } }
+ }
+}
+
+cmpu_private_sub = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+if = { limit = { NOT = { has_variable = cmpu_private_steps } } set_variable = { name = cmpu_private_steps value = 0 } }
+change_variable = { name = cmpu_private_steps add = -1 }
+clamp_variable = { name = cmpu_private_steps min = -10 max = 10 }
+remove_modifier = cmpu_private_share
+if = { limit = { NOT = { var:cmpu_private_steps = 0 } } add_modifier = { name = cmpu_private_share multiplier = var:cmpu_private_steps } }
+ }
+}
+
+cmpu_private_clear = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+remove_modifier = cmpu_private_share
+remove_variable = cmpu_private_steps
+ }
+}
+
+cmpu_output_add = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+if = { limit = { NOT = { has_variable = cmpu_output_steps } } set_variable = { name = cmpu_output_steps value = 0 } }
+change_variable = { name = cmpu_output_steps add = 1 }
+clamp_variable = { name = cmpu_output_steps min = 0 max = 10000 }
+remove_modifier = cmpu_construction_output
+if = { limit = { NOT = { var:cmpu_output_steps = 0 } } add_modifier = { name = cmpu_construction_output multiplier = var:cmpu_output_steps } }
+ }
+}
+
+cmpu_output_shift = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+if = { limit = { NOT = { has_variable = cmpu_output_steps } } set_variable = { name = cmpu_output_steps value = 0 } }
+change_variable = { name = cmpu_output_steps add = 10 }
+clamp_variable = { name = cmpu_output_steps min = 0 max = 10000 }
+remove_modifier = cmpu_construction_output
+if = { limit = { NOT = { var:cmpu_output_steps = 0 } } add_modifier = { name = cmpu_construction_output multiplier = var:cmpu_output_steps } }
+ }
+}
+
+cmpu_output_alt = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+if = { limit = { NOT = { has_variable = cmpu_output_steps } } set_variable = { name = cmpu_output_steps value = 0 } }
+change_variable = { name = cmpu_output_steps add = 100 }
+clamp_variable = { name = cmpu_output_steps min = 0 max = 10000 }
+remove_modifier = cmpu_construction_output
+if = { limit = { NOT = { var:cmpu_output_steps = 0 } } add_modifier = { name = cmpu_construction_output multiplier = var:cmpu_output_steps } }
+ }
+}
+
+cmpu_output_ctrl = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+if = { limit = { NOT = { has_variable = cmpu_output_steps } } set_variable = { name = cmpu_output_steps value = 0 } }
+change_variable = { name = cmpu_output_steps add = -1 }
+clamp_variable = { name = cmpu_output_steps min = 0 max = 10000 }
+remove_modifier = cmpu_construction_output
+if = { limit = { NOT = { var:cmpu_output_steps = 0 } } add_modifier = { name = cmpu_construction_output multiplier = var:cmpu_output_steps } }
+ }
+}
+
+cmpu_output_clear = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+remove_modifier = cmpu_construction_output
+remove_variable = cmpu_output_steps
+ }
+}
+
+cmpu_output_check = {
+ scope = country
+ is_shown = { has_modifier = cmpu_construction_output }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+
+ }
+}
+
+cmpu_select_war_machine_industry = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_select_building_effect = { VAR = sakuya_b6_build_sel_war_machine_industry }
+ }
+}
+
+cmpu_select_chip_industry = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_select_building_effect = { VAR = sakuya_b6_build_sel_chip_industry }
+ }
+}
+
+cmpu_select_computer_industry = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_select_building_effect = { VAR = sakuya_b6_build_sel_computer_industry }
+ }
+}
+
+cmpu_select_appliance_manufactory = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_select_building_effect = { VAR = sakuya_b6_build_sel_appliance_manufactory }
+ }
+}
+
+cmpu_select_aeronautics_industry = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_select_building_effect = { VAR = sakuya_b6_build_sel_aeronautics_industry }
+ }
+}
+
+cmpu_select_army_logistics_center = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_select_building_effect = { VAR = sakuya_b6_build_sel_army_logistics_center }
+ }
+}
+
+cmpu_select_nuclear_plant = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_select_building_effect = { VAR = sakuya_b6_build_sel_nuclear_plant }
+ }
+}
+
+cmpu_select_green_plant = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_select_building_effect = { VAR = sakuya_b6_build_sel_green_plant }
+ }
+}
+
+cmpu_select_airport = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_select_building_effect = { VAR = sakuya_b6_build_sel_airport }
+ }
+}
+
+cmpu_select_spaceport = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_select_building_effect = { VAR = sakuya_b6_build_sel_spaceport }
+ }
+}
+
+cmpu_select_telecommunications = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_select_building_effect = { VAR = sakuya_b6_build_sel_telecommunications }
+ }
+}
+
+cmpu_select_professional_service = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_select_building_effect = { VAR = sakuya_b6_build_sel_professional_service }
+ }
+}
+
+cmpu_select_bank = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_select_building_effect = { VAR = sakuya_b6_build_sel_bank }
+ }
+}
+
+cmpu_select_food_service = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_select_building_effect = { VAR = sakuya_b6_build_sel_food_service }
+ }
+}
+
+cmpu_select_retail_services = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_select_building_effect = { VAR = sakuya_b6_build_sel_retail_services }
+ }
+}
+
+cmpu_select_advertising_agency = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_select_building_effect = { VAR = sakuya_b6_build_sel_advertising_agency }
+ }
+}
+
+cmpu_select_warehouse = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_select_building_effect = { VAR = sakuya_b6_build_sel_warehouse }
+ }
+}
+
+cmpu_select_pharmaceutical_services = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_select_building_effect = { VAR = sakuya_b6_build_sel_pharmaceutical_services }
+ }
+}
+
+cmpu_select_software_industry = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_select_building_effect = { VAR = sakuya_b6_build_sel_software_industry }
+ }
+}
+
+cmpu_select_nuclear_silo = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_select_building_effect = { VAR = sakuya_b6_build_sel_nuclear_silo }
+ }
+}
+
+cmpu_select_ouro_preto = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_select_building_effect = { VAR = sakuya_b6_build_sel_ouro_preto }
+ }
+}
+
+cmpu_select_teatro_amazonas = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_select_building_effect = { VAR = sakuya_b6_build_sel_teatro_amazonas }
+ }
+}
+
+cmpu_select_brasilia = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_select_building_effect = { VAR = sakuya_b6_build_sel_brasilia }
+ }
+}
+
+cmpu_select_world_trade_center = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_select_building_effect = { VAR = sakuya_b6_build_sel_world_trade_center }
+ }
+}
+
+cmpu_build_has_selected_building_check = {
+ scope = country
+ is_shown = { OR = { has_variable = sakuya_b6_build_sel_angkor_wat has_variable = sakuya_b6_build_sel_arms_industry has_variable = sakuya_b6_build_sel_art_academy has_variable = sakuya_b6_build_sel_artillery_foundry has_variable = sakuya_b6_build_sel_automotive_industry has_variable = sakuya_b6_build_sel_banana_plantation has_variable = sakuya_b6_build_sel_barrack has_variable = sakuya_b6_build_sel_big_ben has_variable = sakuya_b6_build_sel_chemical_plant has_variable = sakuya_b6_build_sel_coal_mine has_variable = sakuya_b6_build_sel_coffee_plantation has_variable = sakuya_b6_build_sel_company_headquarter has_variable = sakuya_b6_build_sel_company_regional_headquarter has_variable = sakuya_b6_build_sel_conscription_center has_variable = sakuya_b6_build_sel_construction_sector has_variable = sakuya_b6_build_sel_cotton_plantation has_variable = sakuya_b6_build_sel_cristo_redentor has_variable = sakuya_b6_build_sel_dye_plantation has_variable = sakuya_b6_build_sel_eiffel_tower has_variable = sakuya_b6_build_sel_electrics_industry has_variable = sakuya_b6_build_sel_estacion_de_madrid_atocha has_variable = sakuya_b6_build_sel_explosives_factory has_variable = sakuya_b6_build_sel_financial_district has_variable = sakuya_b6_build_sel_fishing_wharf has_variable = sakuya_b6_build_sel_food_industry has_variable = sakuya_b6_build_sel_forbidden_city has_variable = sakuya_b6_build_sel_furniture_manufactory has_variable = sakuya_b6_build_sel_glassworks has_variable = sakuya_b6_build_sel_gold_field has_variable = sakuya_b6_build_sel_gold_mine has_variable = sakuya_b6_build_sel_government_administration has_variable = sakuya_b6_build_sel_gran_teatro_de_la_habana has_variable = sakuya_b6_build_sel_hagia_sophia has_variable = sakuya_b6_build_sel_iron_mine has_variable = sakuya_b6_build_sel_kaiserforum_1 has_variable = sakuya_b6_build_sel_kaiserforum_2 has_variable = sakuya_b6_build_sel_kaiserforum_3 has_variable = sakuya_b6_build_sel_kaiserforum_4 has_variable = sakuya_b6_build_sel_lead_mine has_variable = sakuya_b6_build_sel_livestock_ranch has_variable = sakuya_b6_build_sel_logging_camp has_variable = sakuya_b6_build_sel_machu_picchu has_variable = sakuya_b6_build_sel_maize_farm has_variable = sakuya_b6_build_sel_manila_cathedral_monument has_variable = sakuya_b6_build_sel_manila_cathedral_original has_variable = sakuya_b6_build_sel_manila_cathedral_ruins has_variable = sakuya_b6_build_sel_manor_house has_variable = sakuya_b6_build_sel_millet_farm has_variable = sakuya_b6_build_sel_mosque_of_djenne has_variable = sakuya_b6_build_sel_motor_industry has_variable = sakuya_b6_build_sel_munition_plant has_variable = sakuya_b6_build_sel_naval_administration has_variable = sakuya_b6_build_sel_naval_fortification has_variable = sakuya_b6_build_sel_naval_logistics_center has_variable = sakuya_b6_build_sel_oil_rig has_variable = sakuya_b6_build_sel_opium_plantation has_variable = sakuya_b6_build_sel_panama_canal has_variable = sakuya_b6_build_sel_paper_mill has_variable = sakuya_b6_build_sel_pena_convent has_variable = sakuya_b6_build_sel_pena_palace has_variable = sakuya_b6_build_sel_port has_variable = sakuya_b6_build_sel_power_bloc_statue has_variable = sakuya_b6_build_sel_power_plant has_variable = sakuya_b6_build_sel_railway has_variable = sakuya_b6_build_sel_rice_farm has_variable = sakuya_b6_build_sel_rubber_plantation has_variable = sakuya_b6_build_sel_rye_farm has_variable = sakuya_b6_build_sel_sagrada_familia_cathedral_1 has_variable = sakuya_b6_build_sel_sagrada_familia_cathedral_2 has_variable = sakuya_b6_build_sel_sagrada_familia_cathedral_3 has_variable = sakuya_b6_build_sel_saint_basils_cathedral has_variable = sakuya_b6_build_sel_shipyard has_variable = sakuya_b6_build_sel_silk_plantation has_variable = sakuya_b6_build_sel_skyscraper has_variable = sakuya_b6_build_sel_statue_of_liberty has_variable = sakuya_b6_build_sel_steel_mill has_variable = sakuya_b6_build_sel_suez_canal has_variable = sakuya_b6_build_sel_sugar_plantation has_variable = sakuya_b6_build_sel_sulfur_mine has_variable = sakuya_b6_build_sel_synthetics_plant has_variable = sakuya_b6_build_sel_taj_mahal has_variable = sakuya_b6_build_sel_tea_plantation has_variable = sakuya_b6_build_sel_textile_mill has_variable = sakuya_b6_build_sel_tobacco_plantation has_variable = sakuya_b6_build_sel_tooling_workshop has_variable = sakuya_b6_build_sel_trade_center has_variable = sakuya_b6_build_sel_university has_variable = sakuya_b6_build_sel_urban_center has_variable = sakuya_b6_build_sel_vatican_city has_variable = sakuya_b6_build_sel_victoria_terminus has_variable = sakuya_b6_build_sel_vineyard has_variable = sakuya_b6_build_sel_whaling_station has_variable = sakuya_b6_build_sel_wheat_farm has_variable = sakuya_b6_build_sel_white_house has_variable = sakuya_b6_build_sel_war_machine_industry has_variable = sakuya_b6_build_sel_chip_industry has_variable = sakuya_b6_build_sel_computer_industry has_variable = sakuya_b6_build_sel_appliance_manufactory has_variable = sakuya_b6_build_sel_aeronautics_industry has_variable = sakuya_b6_build_sel_army_logistics_center has_variable = sakuya_b6_build_sel_nuclear_plant has_variable = sakuya_b6_build_sel_green_plant has_variable = sakuya_b6_build_sel_airport has_variable = sakuya_b6_build_sel_spaceport has_variable = sakuya_b6_build_sel_telecommunications has_variable = sakuya_b6_build_sel_professional_service has_variable = sakuya_b6_build_sel_bank has_variable = sakuya_b6_build_sel_food_service has_variable = sakuya_b6_build_sel_retail_services has_variable = sakuya_b6_build_sel_advertising_agency has_variable = sakuya_b6_build_sel_warehouse has_variable = sakuya_b6_build_sel_pharmaceutical_services has_variable = sakuya_b6_build_sel_software_industry has_variable = sakuya_b6_build_sel_nuclear_silo has_variable = sakuya_b6_build_sel_ouro_preto has_variable = sakuya_b6_build_sel_teatro_amazonas has_variable = sakuya_b6_build_sel_brasilia has_variable = sakuya_b6_build_sel_world_trade_center } }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+
+ }
+}
+
+cmpu_build_can_confirm_check = {
+ scope = country
+ is_shown = { any_scope_state = { has_decree = decree_sakuya_mark_state } OR = { has_variable = sakuya_b6_build_sel_angkor_wat has_variable = sakuya_b6_build_sel_arms_industry has_variable = sakuya_b6_build_sel_art_academy has_variable = sakuya_b6_build_sel_artillery_foundry has_variable = sakuya_b6_build_sel_automotive_industry has_variable = sakuya_b6_build_sel_banana_plantation has_variable = sakuya_b6_build_sel_barrack has_variable = sakuya_b6_build_sel_big_ben has_variable = sakuya_b6_build_sel_chemical_plant has_variable = sakuya_b6_build_sel_coal_mine has_variable = sakuya_b6_build_sel_coffee_plantation has_variable = sakuya_b6_build_sel_company_headquarter has_variable = sakuya_b6_build_sel_company_regional_headquarter has_variable = sakuya_b6_build_sel_conscription_center has_variable = sakuya_b6_build_sel_construction_sector has_variable = sakuya_b6_build_sel_cotton_plantation has_variable = sakuya_b6_build_sel_cristo_redentor has_variable = sakuya_b6_build_sel_dye_plantation has_variable = sakuya_b6_build_sel_eiffel_tower has_variable = sakuya_b6_build_sel_electrics_industry has_variable = sakuya_b6_build_sel_estacion_de_madrid_atocha has_variable = sakuya_b6_build_sel_explosives_factory has_variable = sakuya_b6_build_sel_financial_district has_variable = sakuya_b6_build_sel_fishing_wharf has_variable = sakuya_b6_build_sel_food_industry has_variable = sakuya_b6_build_sel_forbidden_city has_variable = sakuya_b6_build_sel_furniture_manufactory has_variable = sakuya_b6_build_sel_glassworks has_variable = sakuya_b6_build_sel_gold_field has_variable = sakuya_b6_build_sel_gold_mine has_variable = sakuya_b6_build_sel_government_administration has_variable = sakuya_b6_build_sel_gran_teatro_de_la_habana has_variable = sakuya_b6_build_sel_hagia_sophia has_variable = sakuya_b6_build_sel_iron_mine has_variable = sakuya_b6_build_sel_kaiserforum_1 has_variable = sakuya_b6_build_sel_kaiserforum_2 has_variable = sakuya_b6_build_sel_kaiserforum_3 has_variable = sakuya_b6_build_sel_kaiserforum_4 has_variable = sakuya_b6_build_sel_lead_mine has_variable = sakuya_b6_build_sel_livestock_ranch has_variable = sakuya_b6_build_sel_logging_camp has_variable = sakuya_b6_build_sel_machu_picchu has_variable = sakuya_b6_build_sel_maize_farm has_variable = sakuya_b6_build_sel_manila_cathedral_monument has_variable = sakuya_b6_build_sel_manila_cathedral_original has_variable = sakuya_b6_build_sel_manila_cathedral_ruins has_variable = sakuya_b6_build_sel_manor_house has_variable = sakuya_b6_build_sel_millet_farm has_variable = sakuya_b6_build_sel_mosque_of_djenne has_variable = sakuya_b6_build_sel_motor_industry has_variable = sakuya_b6_build_sel_munition_plant has_variable = sakuya_b6_build_sel_naval_administration has_variable = sakuya_b6_build_sel_naval_fortification has_variable = sakuya_b6_build_sel_naval_logistics_center has_variable = sakuya_b6_build_sel_oil_rig has_variable = sakuya_b6_build_sel_opium_plantation has_variable = sakuya_b6_build_sel_panama_canal has_variable = sakuya_b6_build_sel_paper_mill has_variable = sakuya_b6_build_sel_pena_convent has_variable = sakuya_b6_build_sel_pena_palace has_variable = sakuya_b6_build_sel_port has_variable = sakuya_b6_build_sel_power_bloc_statue has_variable = sakuya_b6_build_sel_power_plant has_variable = sakuya_b6_build_sel_railway has_variable = sakuya_b6_build_sel_rice_farm has_variable = sakuya_b6_build_sel_rubber_plantation has_variable = sakuya_b6_build_sel_rye_farm has_variable = sakuya_b6_build_sel_sagrada_familia_cathedral_1 has_variable = sakuya_b6_build_sel_sagrada_familia_cathedral_2 has_variable = sakuya_b6_build_sel_sagrada_familia_cathedral_3 has_variable = sakuya_b6_build_sel_saint_basils_cathedral has_variable = sakuya_b6_build_sel_shipyard has_variable = sakuya_b6_build_sel_silk_plantation has_variable = sakuya_b6_build_sel_skyscraper has_variable = sakuya_b6_build_sel_statue_of_liberty has_variable = sakuya_b6_build_sel_steel_mill has_variable = sakuya_b6_build_sel_suez_canal has_variable = sakuya_b6_build_sel_sugar_plantation has_variable = sakuya_b6_build_sel_sulfur_mine has_variable = sakuya_b6_build_sel_synthetics_plant has_variable = sakuya_b6_build_sel_taj_mahal has_variable = sakuya_b6_build_sel_tea_plantation has_variable = sakuya_b6_build_sel_textile_mill has_variable = sakuya_b6_build_sel_tobacco_plantation has_variable = sakuya_b6_build_sel_tooling_workshop has_variable = sakuya_b6_build_sel_trade_center has_variable = sakuya_b6_build_sel_university has_variable = sakuya_b6_build_sel_urban_center has_variable = sakuya_b6_build_sel_vatican_city has_variable = sakuya_b6_build_sel_victoria_terminus has_variable = sakuya_b6_build_sel_vineyard has_variable = sakuya_b6_build_sel_whaling_station has_variable = sakuya_b6_build_sel_wheat_farm has_variable = sakuya_b6_build_sel_white_house has_variable = sakuya_b6_build_sel_war_machine_industry has_variable = sakuya_b6_build_sel_chip_industry has_variable = sakuya_b6_build_sel_computer_industry has_variable = sakuya_b6_build_sel_appliance_manufactory has_variable = sakuya_b6_build_sel_aeronautics_industry has_variable = sakuya_b6_build_sel_army_logistics_center has_variable = sakuya_b6_build_sel_nuclear_plant has_variable = sakuya_b6_build_sel_green_plant has_variable = sakuya_b6_build_sel_airport has_variable = sakuya_b6_build_sel_spaceport has_variable = sakuya_b6_build_sel_telecommunications has_variable = sakuya_b6_build_sel_professional_service has_variable = sakuya_b6_build_sel_bank has_variable = sakuya_b6_build_sel_food_service has_variable = sakuya_b6_build_sel_retail_services has_variable = sakuya_b6_build_sel_advertising_agency has_variable = sakuya_b6_build_sel_warehouse has_variable = sakuya_b6_build_sel_pharmaceutical_services has_variable = sakuya_b6_build_sel_software_industry has_variable = sakuya_b6_build_sel_nuclear_silo has_variable = sakuya_b6_build_sel_ouro_preto has_variable = sakuya_b6_build_sel_teatro_amazonas has_variable = sakuya_b6_build_sel_brasilia has_variable = sakuya_b6_build_sel_world_trade_center } }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+
+ }
+}
+
+cmpu_build_confirm_player = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+if = { limit = { has_variable = sakuya_b6_build_sel_war_machine_industry } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_war_machine_industry } }
+if = { limit = { has_variable = sakuya_b6_build_sel_chip_industry } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_chip_industry } }
+if = { limit = { has_variable = sakuya_b6_build_sel_computer_industry } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_computer_industry } }
+if = { limit = { has_variable = sakuya_b6_build_sel_appliance_manufactory } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_appliance_manufactory } }
+if = { limit = { has_variable = sakuya_b6_build_sel_aeronautics_industry } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_aeronautics_industry } }
+if = { limit = { has_variable = sakuya_b6_build_sel_army_logistics_center } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_army_logistics_center } }
+if = { limit = { has_variable = sakuya_b6_build_sel_nuclear_plant } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_nuclear_plant } }
+if = { limit = { has_variable = sakuya_b6_build_sel_green_plant } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_green_plant } }
+if = { limit = { has_variable = sakuya_b6_build_sel_airport } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_airport } }
+if = { limit = { has_variable = sakuya_b6_build_sel_spaceport } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_spaceport } }
+if = { limit = { has_variable = sakuya_b6_build_sel_telecommunications } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_telecommunications } }
+if = { limit = { has_variable = sakuya_b6_build_sel_professional_service } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_professional_service } }
+if = { limit = { has_variable = sakuya_b6_build_sel_bank } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_bank } }
+if = { limit = { has_variable = sakuya_b6_build_sel_food_service } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_food_service } }
+if = { limit = { has_variable = sakuya_b6_build_sel_retail_services } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_retail_services } }
+if = { limit = { has_variable = sakuya_b6_build_sel_advertising_agency } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_advertising_agency } }
+if = { limit = { has_variable = sakuya_b6_build_sel_warehouse } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_warehouse } }
+if = { limit = { has_variable = sakuya_b6_build_sel_pharmaceutical_services } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_pharmaceutical_services } }
+if = { limit = { has_variable = sakuya_b6_build_sel_software_industry } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_software_industry } }
+if = { limit = { has_variable = sakuya_b6_build_sel_nuclear_silo } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_nuclear_silo } }
+if = { limit = { has_variable = sakuya_b6_build_sel_ouro_preto } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_ouro_preto } }
+if = { limit = { has_variable = sakuya_b6_build_sel_teatro_amazonas } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_teatro_amazonas } }
+if = { limit = { has_variable = sakuya_b6_build_sel_brasilia } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_brasilia } }
+if = { limit = { has_variable = sakuya_b6_build_sel_world_trade_center } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_world_trade_center } }
+else = { sakuya_b6_build_confirm_player_effect = yes }
+ }
+}
+
+cmpu_build_confirm_integrated = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+if = { limit = { has_variable = sakuya_b6_build_sel_war_machine_industry } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_war_machine_industry } }
+if = { limit = { has_variable = sakuya_b6_build_sel_chip_industry } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_chip_industry } }
+if = { limit = { has_variable = sakuya_b6_build_sel_computer_industry } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_computer_industry } }
+if = { limit = { has_variable = sakuya_b6_build_sel_appliance_manufactory } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_appliance_manufactory } }
+if = { limit = { has_variable = sakuya_b6_build_sel_aeronautics_industry } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_aeronautics_industry } }
+if = { limit = { has_variable = sakuya_b6_build_sel_army_logistics_center } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_army_logistics_center } }
+if = { limit = { has_variable = sakuya_b6_build_sel_nuclear_plant } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_nuclear_plant } }
+if = { limit = { has_variable = sakuya_b6_build_sel_green_plant } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_green_plant } }
+if = { limit = { has_variable = sakuya_b6_build_sel_airport } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_airport } }
+if = { limit = { has_variable = sakuya_b6_build_sel_spaceport } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_spaceport } }
+if = { limit = { has_variable = sakuya_b6_build_sel_telecommunications } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_telecommunications } }
+if = { limit = { has_variable = sakuya_b6_build_sel_professional_service } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_professional_service } }
+if = { limit = { has_variable = sakuya_b6_build_sel_bank } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_bank } }
+if = { limit = { has_variable = sakuya_b6_build_sel_food_service } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_food_service } }
+if = { limit = { has_variable = sakuya_b6_build_sel_retail_services } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_retail_services } }
+if = { limit = { has_variable = sakuya_b6_build_sel_advertising_agency } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_advertising_agency } }
+if = { limit = { has_variable = sakuya_b6_build_sel_warehouse } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_warehouse } }
+if = { limit = { has_variable = sakuya_b6_build_sel_pharmaceutical_services } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_pharmaceutical_services } }
+if = { limit = { has_variable = sakuya_b6_build_sel_software_industry } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_software_industry } }
+if = { limit = { has_variable = sakuya_b6_build_sel_nuclear_silo } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_nuclear_silo } }
+if = { limit = { has_variable = sakuya_b6_build_sel_ouro_preto } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_ouro_preto } }
+if = { limit = { has_variable = sakuya_b6_build_sel_teatro_amazonas } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_teatro_amazonas } }
+if = { limit = { has_variable = sakuya_b6_build_sel_brasilia } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_brasilia } }
+if = { limit = { has_variable = sakuya_b6_build_sel_world_trade_center } sakuya_b6_build_apply_to_player_marked_states_effect = { BUILDING = building_world_trade_center } }
+else = { sakuya_b6_build_confirm_integrated_effect = yes }
+ }
+}
+
+cmpu_build_confirm_marked = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+if = { limit = { has_variable = sakuya_b6_build_sel_war_machine_industry } sakuya_b6_build_apply_to_marked_country_states_effect = { BUILDING = building_war_machine_industry } }
+if = { limit = { has_variable = sakuya_b6_build_sel_chip_industry } sakuya_b6_build_apply_to_marked_country_states_effect = { BUILDING = building_chip_industry } }
+if = { limit = { has_variable = sakuya_b6_build_sel_computer_industry } sakuya_b6_build_apply_to_marked_country_states_effect = { BUILDING = building_computer_industry } }
+if = { limit = { has_variable = sakuya_b6_build_sel_appliance_manufactory } sakuya_b6_build_apply_to_marked_country_states_effect = { BUILDING = building_appliance_manufactory } }
+if = { limit = { has_variable = sakuya_b6_build_sel_aeronautics_industry } sakuya_b6_build_apply_to_marked_country_states_effect = { BUILDING = building_aeronautics_industry } }
+if = { limit = { has_variable = sakuya_b6_build_sel_army_logistics_center } sakuya_b6_build_apply_to_marked_country_states_effect = { BUILDING = building_army_logistics_center } }
+if = { limit = { has_variable = sakuya_b6_build_sel_nuclear_plant } sakuya_b6_build_apply_to_marked_country_states_effect = { BUILDING = building_nuclear_plant } }
+if = { limit = { has_variable = sakuya_b6_build_sel_green_plant } sakuya_b6_build_apply_to_marked_country_states_effect = { BUILDING = building_green_plant } }
+if = { limit = { has_variable = sakuya_b6_build_sel_airport } sakuya_b6_build_apply_to_marked_country_states_effect = { BUILDING = building_airport } }
+if = { limit = { has_variable = sakuya_b6_build_sel_spaceport } sakuya_b6_build_apply_to_marked_country_states_effect = { BUILDING = building_spaceport } }
+if = { limit = { has_variable = sakuya_b6_build_sel_telecommunications } sakuya_b6_build_apply_to_marked_country_states_effect = { BUILDING = building_telecommunications } }
+if = { limit = { has_variable = sakuya_b6_build_sel_professional_service } sakuya_b6_build_apply_to_marked_country_states_effect = { BUILDING = building_professional_service } }
+if = { limit = { has_variable = sakuya_b6_build_sel_bank } sakuya_b6_build_apply_to_marked_country_states_effect = { BUILDING = building_bank } }
+if = { limit = { has_variable = sakuya_b6_build_sel_food_service } sakuya_b6_build_apply_to_marked_country_states_effect = { BUILDING = building_food_service } }
+if = { limit = { has_variable = sakuya_b6_build_sel_retail_services } sakuya_b6_build_apply_to_marked_country_states_effect = { BUILDING = building_retail_services } }
+if = { limit = { has_variable = sakuya_b6_build_sel_advertising_agency } sakuya_b6_build_apply_to_marked_country_states_effect = { BUILDING = building_advertising_agency } }
+if = { limit = { has_variable = sakuya_b6_build_sel_warehouse } sakuya_b6_build_apply_to_marked_country_states_effect = { BUILDING = building_warehouse } }
+if = { limit = { has_variable = sakuya_b6_build_sel_pharmaceutical_services } sakuya_b6_build_apply_to_marked_country_states_effect = { BUILDING = building_pharmaceutical_services } }
+if = { limit = { has_variable = sakuya_b6_build_sel_software_industry } sakuya_b6_build_apply_to_marked_country_states_effect = { BUILDING = building_software_industry } }
+if = { limit = { has_variable = sakuya_b6_build_sel_nuclear_silo } sakuya_b6_build_apply_to_marked_country_states_effect = { BUILDING = building_nuclear_silo } }
+if = { limit = { has_variable = sakuya_b6_build_sel_ouro_preto } sakuya_b6_build_apply_to_marked_country_states_effect = { BUILDING = building_ouro_preto } }
+if = { limit = { has_variable = sakuya_b6_build_sel_teatro_amazonas } sakuya_b6_build_apply_to_marked_country_states_effect = { BUILDING = building_teatro_amazonas } }
+if = { limit = { has_variable = sakuya_b6_build_sel_brasilia } sakuya_b6_build_apply_to_marked_country_states_effect = { BUILDING = building_brasilia } }
+if = { limit = { has_variable = sakuya_b6_build_sel_world_trade_center } sakuya_b6_build_apply_to_marked_country_states_effect = { BUILDING = building_world_trade_center } }
+else = { sakuya_b6_build_confirm_marked_effect = yes }
+ }
+}
+
+cmpu_build_potential_player = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_potential_player_effect = yes
+ }
+}
+
+cmpu_build_potential_player_integrated = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_potential_player_effect = yes
+ }
+}
+
+cmpu_build_potential_marked = {
+ scope = country
+ is_shown = { is_player = yes }
+ is_valid = { always = yes }
+ ai_is_valid = { always = no }
+ effect = {
+sakuya_b6_build_potential_marked_effect = yes
+ }
+}

@@ -1,0 +1,44 @@
+STATIC PACKAGE VALIDATION
+
+CHECK: Brace/quote/comment balance across game scripts and GUI
+CHECK: Valid launcher metadata JSON and Victoria 3 1.13 version declaration
+CHECK: Unique namespaced scripted GUI/effect/static-modifier definitions
+CHECK: All 59 patch GUI action references resolve to packaged definitions
+CHECK: All 30 original-to-patched binding replacements complete
+CHECK: All referenced patch modifiers exist
+CHECK: Native modifier keys match 1.13 engine documentation
+CHECK: Original technology callbacks retained unchanged
+CHECK: All 24 added UNIPOLAR picker entries have selection and display cards
+CHECK: No PowerShell, BAT, shell installer, Python, EXE, or DLL files included
+
+Scripted GUIs: 61
+Static modifiers: 5
+New buildings: 24
+
+Runtime test: not performed; no Victoria 3 executable is available in this environment.
+
+ERRORS
+Missing card war_machine_industry
+Missing card chip_industry
+Missing card computer_industry
+Missing card appliance_manufactory
+Missing card aeronautics_industry
+Missing card army_logistics_center
+Missing card nuclear_plant
+Missing card green_plant
+Missing card airport
+Missing card spaceport
+Missing card telecommunications
+Missing card professional_service
+Missing card bank
+Missing card food_service
+Missing card retail_services
+Missing card advertising_agency
+Missing card warehouse
+Missing card pharmaceutical_services
+Missing card software_industry
+Missing card nuclear_silo
+Missing card ouro_preto
+Missing card teatro_amazonas
+Missing card brasilia
+Missing card world_trade_center

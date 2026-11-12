@@ -1,0 +1,9 @@
+﻿# Preserve UNIPOLAR definitions; enable native construction-efficiency hook only where supported.
+TRY_INJECT:bg_banking = { construction_efficiency_modifier = yes }
+TRY_INJECT:bg_extraction = { construction_efficiency_modifier = yes }
+TRY_INJECT:bg_government = { construction_efficiency_modifier = yes }
+TRY_INJECT:bg_infrastructure = { construction_efficiency_modifier = yes }
+TRY_INJECT:bg_military = { construction_efficiency_modifier = yes }
+TRY_INJECT:bg_plantations = { construction_efficiency_modifier = yes }
+TRY_INJECT:bg_services = { construction_efficiency_modifier = yes }
+TRY_INJECT:bg_ship_construction = { construction_efficiency_modifier = yes }
