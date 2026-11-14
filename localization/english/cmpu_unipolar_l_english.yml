@@ -1,0 +1,258 @@
+l_english:
+
+  # ============================================================
+
+  # CMPU UNIPOLAR PATCH - UNIPOLAR interest groups & ideologies
+
+  # ============================================================
+
+  cmpu_ig_tt_professionals: "#BOLD $ig_professionals$#!\n\nThe UNIPOLAR interest group for professionals (engineers, lawyers, teachers, doctors, civil servants).\n\n#lore Left click selects it, right click selects only this group.#!"
+
+
+
+  cmpu_ido_authoritarian: "Authoritarian"
+
+  cmpu_ido_tt_authoritarian: "#BOLD Authoritarian#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: Bureaucrats / Intelligentsia, Landowners, Industrialists.#!"
+
+  cmpu_ido_centre_economy: "Centre Economy"
+
+  cmpu_ido_tt_centre_economy: "#BOLD Centre Economy#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: Bureaucrats / Intelligentsia, Devout.#!"
+
+  cmpu_ido_communist: "Communist"
+
+  cmpu_ido_tt_communist: "#BOLD Communist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: Trade Unions.#!"
+
+  cmpu_ido_communitarian: "Communitarian"
+
+  cmpu_ido_tt_communitarian: "#BOLD Communitarian#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: Rural Folk, Trade Unions.#!"
+
+  cmpu_ido_conservative: "Conservative"
+
+  cmpu_ido_tt_conservative: "#BOLD Conservative#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: Armed Forces, Bureaucrats / Intelligentsia, Rural Folk.#!"
+
+  cmpu_ido_far_left_economy: "Far Left Economy"
+
+  cmpu_ido_tt_far_left_economy: "#BOLD Far Left Economy#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: Trade Unions.#!"
+
+  cmpu_ido_far_right_economy: "Far Right Economy"
+
+  cmpu_ido_tt_far_right_economy: "#BOLD Far Right Economy#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: Industrialists.#!"
+
+  cmpu_ido_globalist: "Globalist"
+
+  cmpu_ido_tt_globalist: "#BOLD Globalist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: Professionals, Industrialists.#!"
+
+  cmpu_ido_individualist: "Individualist"
+
+  cmpu_ido_tt_individualist: "#BOLD Individualist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: Professionals, Petty Bourgeoisie.#!"
+
+  cmpu_ido_isolationist: "Isolationist"
+
+  cmpu_ido_tt_isolationist: "#BOLD Isolationist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: Devout.#!"
+
+  cmpu_ido_left_economy: "Left Economy"
+
+  cmpu_ido_tt_left_economy: "#BOLD Left Economy#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: Armed Forces, Rural Folk.#!"
+
+  cmpu_ido_militarist: "Militarist"
+
+  cmpu_ido_tt_militarist: "#BOLD Militarist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: Armed Forces, Bureaucrats / Intelligentsia, Rural Folk.#!"
+
+  cmpu_ido_monarchist: "Monarchist"
+
+  cmpu_ido_tt_monarchist: "#BOLD Monarchist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: Landowners.#!"
+
+  cmpu_ido_nationalist: "Nationalist"
+
+  cmpu_ido_tt_nationalist: "#BOLD Nationalist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: Landowners, Trade Unions.#!"
+
+  cmpu_ido_progressive: "Progressive"
+
+  cmpu_ido_tt_progressive: "#BOLD Progressive#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: Professionals, Trade Unions, Petty Bourgeoisie.#!"
+
+  cmpu_ido_regionalist: "Regionalist"
+
+  cmpu_ido_tt_regionalist: "#BOLD Regionalist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: Armed Forces, Bureaucrats / Intelligentsia, Rural Folk, Petty Bourgeoisie.#!"
+
+  cmpu_ido_republican: "Republican"
+
+  cmpu_ido_tt_republican: "#BOLD Republican#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: Professionals, Petty Bourgeoisie, Industrialists.#!"
+
+  cmpu_ido_right_economy: "Right Economy"
+
+  cmpu_ido_tt_right_economy: "#BOLD Right Economy#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: Professionals, Landowners, Petty Bourgeoisie.#!"
+
+  cmpu_ido_theocrat: "Theocrat"
+
+  cmpu_ido_tt_theocrat: "#BOLD Theocrat#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: Devout.#!"
+
+  cmpu_ido_totalitarian: "Totalitarian"
+
+  cmpu_ido_tt_totalitarian: "#BOLD Totalitarian#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: Armed Forces, Devout.#!"
+
+  cmpu_ido_traditionalist: "Traditionalist"
+
+  cmpu_ido_tt_traditionalist: "#BOLD Traditionalist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: Devout, Landowners.#!"
+
+  cmpu_ido_agrarian_jeffersonian: "Agrarian (Jeffersonian)"
+
+  cmpu_ido_tt_agrarian_jeffersonian: "#BOLD Agrarian (Jeffersonian)#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nNo UNIPOLAR interest group lists this ideology by default.#!"
+
+  cmpu_ido_austrian_hegemony: "Austrian Hegemony"
+
+  cmpu_ido_tt_austrian_hegemony: "#BOLD Austrian Hegemony#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nNo UNIPOLAR interest group lists this ideology by default.#!"
+
+  cmpu_ido_bakufu: "Bakufu"
+
+  cmpu_ido_tt_bakufu: "#BOLD Bakufu#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nNo UNIPOLAR interest group lists this ideology by default.#!"
+
+  cmpu_ido_buddhist_moralist: "Buddhist Moralist"
+
+  cmpu_ido_tt_buddhist_moralist: "#BOLD Buddhist Moralist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nNo UNIPOLAR interest group lists this ideology by default.#!"
+
+  cmpu_ido_caudillismo: "Caudillismo"
+
+  cmpu_ido_tt_caudillismo: "#BOLD Caudillismo#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nNo UNIPOLAR interest group lists this ideology by default.#!"
+
+  cmpu_ido_colonialist: "Colonialist"
+
+  cmpu_ido_tt_colonialist: "#BOLD Colonialist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nNo UNIPOLAR interest group lists this ideology by default.#!"
+
+  cmpu_ido_confucian: "Confucian"
+
+  cmpu_ido_tt_confucian: "#BOLD Confucian#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nNo UNIPOLAR interest group lists this ideology by default.#!"
+
+  cmpu_ido_constitutionalist: "Constitutionalist"
+
+  cmpu_ido_tt_constitutionalist: "#BOLD Constitutionalist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nNo UNIPOLAR interest group lists this ideology by default.#!"
+
+  cmpu_ido_enclavist: "Enclavist"
+
+  cmpu_ido_tt_enclavist: "#BOLD Enclavist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nNo UNIPOLAR interest group lists this ideology by default.#!"
+
+  cmpu_ido_heavenly_kingdom_theocratic: "Heavenly Kingdom (Theocratic)"
+
+  cmpu_ido_tt_heavenly_kingdom_theocratic: "#BOLD Heavenly Kingdom (Theocratic)#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nNo UNIPOLAR interest group lists this ideology by default.#!"
+
+  cmpu_ido_hindu_moralist: "Hindu Moralist"
+
+  cmpu_ido_tt_hindu_moralist: "#BOLD Hindu Moralist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nNo UNIPOLAR interest group lists this ideology by default.#!"
+
+  cmpu_ido_hindu_moralist_british_india: "Hindu Moralist (British India)"
+
+  cmpu_ido_tt_hindu_moralist_british_india: "#BOLD Hindu Moralist (British India)#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nNo UNIPOLAR interest group lists this ideology by default.#!"
+
+  cmpu_ido_junker_paternalistic: "Junker (Paternalistic)"
+
+  cmpu_ido_tt_junker_paternalistic: "#BOLD Junker (Paternalistic)#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nNo UNIPOLAR interest group lists this ideology by default.#!"
+
+  cmpu_ido_malthusian: "Malthusian"
+
+  cmpu_ido_tt_malthusian: "#BOLD Malthusian#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nNo UNIPOLAR interest group lists this ideology by default.#!"
+
+  cmpu_ido_oriental_orthodox_patriarch: "Oriental Orthodox Patriarch"
+
+  cmpu_ido_tt_oriental_orthodox_patriarch: "#BOLD Oriental Orthodox Patriarch#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nNo UNIPOLAR interest group lists this ideology by default.#!"
+
+  cmpu_ido_orthodox_patriarch: "Orthodox Patriarch"
+
+  cmpu_ido_tt_orthodox_patriarch: "#BOLD Orthodox Patriarch#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nNo UNIPOLAR interest group lists this ideology by default.#!"
+
+  cmpu_ido_papal_moralist: "Papal Moralist"
+
+  cmpu_ido_tt_papal_moralist: "#BOLD Papal Moralist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nNo UNIPOLAR interest group lists this ideology by default.#!"
+
+  cmpu_ido_papal_paternalistic: "Papal (Paternalistic)"
+
+  cmpu_ido_tt_papal_paternalistic: "#BOLD Papal (Paternalistic)#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nNo UNIPOLAR interest group lists this ideology by default.#!"
+
+  cmpu_ido_russian_patriarch: "Russian Patriarch"
+
+  cmpu_ido_tt_russian_patriarch: "#BOLD Russian Patriarch#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nNo UNIPOLAR interest group lists this ideology by default.#!"
+
+  cmpu_ido_scholar_paternalistic: "Scholar (Paternalistic)"
+
+  cmpu_ido_tt_scholar_paternalistic: "#BOLD Scholar (Paternalistic)#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nNo UNIPOLAR interest group lists this ideology by default.#!"
+
+  cmpu_ido_shinto_moralist: "Shinto Moralist"
+
+  cmpu_ido_tt_shinto_moralist: "#BOLD Shinto Moralist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nNo UNIPOLAR interest group lists this ideology by default.#!"
+
+  cmpu_ido_sikh_militancy: "Sikh Militancy"
+
+  cmpu_ido_tt_sikh_militancy: "#BOLD Sikh Militancy#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nNo UNIPOLAR interest group lists this ideology by default.#!"
+
+  cmpu_ido_sikh_moralist: "Sikh Moralist"
+
+  cmpu_ido_tt_sikh_moralist: "#BOLD Sikh Moralist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nNo UNIPOLAR interest group lists this ideology by default.#!"
+
+  cmpu_ido_sovereignist: "Sovereignist"
+
+  cmpu_ido_tt_sovereignist: "#BOLD Sovereignist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nNo UNIPOLAR interest group lists this ideology by default.#!"
+
+  cmpu_ido_utilitarian_millian: "Utilitarian (Millian)"
+
+  cmpu_ido_tt_utilitarian_millian: "#BOLD Utilitarian (Millian)#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nNo UNIPOLAR interest group lists this ideology by default.#!"
+  SKY_B5_IDO_authoritarian: "Authoritarian"
+  SKY_B5_IDO_centre_economy: "Centre Economy"
+  SKY_B5_IDO_communist: "Communist"
+  SKY_B5_IDO_communitarian: "Communitarian"
+  SKY_B5_IDO_conservative: "Conservative"
+  SKY_B5_IDO_far_left_economy: "Far Left Economy"
+  SKY_B5_IDO_far_right_economy: "Far Right Economy"
+  SKY_B5_IDO_globalist: "Globalist"
+  SKY_B5_IDO_left_economy: "Left Economy"
+  SKY_B5_IDO_militarist: "Militarist"
+  SKY_B5_IDO_monarchist: "Monarchist"
+  SKY_B5_IDO_nationalist: "Nationalist"
+  SKY_B5_IDO_progressive: "Progressive"
+  SKY_B5_IDO_regionalist: "Regionalist"
+  SKY_B5_IDO_right_economy: "Right Economy"
+  SKY_B5_IDO_theocrat: "Theocrat"
+  SKY_B5_IDO_totalitarian: "Totalitarian"
+  SKY_B5_IDO_traditionalist: "Traditionalist"
+  SKY_B5_IDO_TT_agrarian_jeffersonian: "#BOLD Agrarian (Jeffersonian)#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_austrian_hegemony: "#BOLD Austrian Hegemony#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_authoritarian: "#BOLD Authoritarian#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_bakufu: "#BOLD Bakufu#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_buddhist_moralist: "#BOLD Buddhist Moralist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_caudillismo: "#BOLD Caudillismo#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_centre_economy: "#BOLD Centre Economy#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_colonialist: "#BOLD Colonialist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_communist: "#BOLD Communist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_communitarian: "#BOLD Communitarian#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_confucian: "#BOLD Confucian#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_conservative: "#BOLD Conservative#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_constitutionalist: "#BOLD Constitutionalist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_enclavist: "#BOLD Enclavist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_far_left_economy: "#BOLD Far Left Economy#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_far_right_economy: "#BOLD Far Right Economy#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_globalist: "#BOLD Globalist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_heavenly_kingdom_theocratic: "#BOLD Heavenly Kingdom (Theocratic)#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_hindu_moralist: "#BOLD Hindu Moralist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_hindu_moralist_british_india: "#BOLD Hindu Moralist (British India)#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_individualist: "#BOLD Individualist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_isolationist: "#BOLD Isolationist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_junker_paternalistic: "#BOLD Junker (Paternalistic)#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_left_economy: "#BOLD Left Economy#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_malthusian: "#BOLD Malthusian#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_monarchist: "#BOLD Monarchist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_nationalist: "#BOLD Nationalist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_oriental_orthodox_patriarch: "#BOLD Oriental Orthodox Patriarch#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_orthodox_patriarch: "#BOLD Orthodox Patriarch#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_papal_moralist: "#BOLD Papal Moralist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_papal_paternalistic: "#BOLD Papal (Paternalistic)#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_progressive: "#BOLD Progressive#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_regionalist: "#BOLD Regionalist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_republican: "#BOLD Republican#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_right_economy: "#BOLD Right Economy#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_russian_patriarch: "#BOLD Russian Patriarch#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_scholar_paternalistic: "#BOLD Scholar (Paternalistic)#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_shinto_moralist: "#BOLD Shinto Moralist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_sikh_militancy: "#BOLD Sikh Militancy#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_sikh_moralist: "#BOLD Sikh Moralist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_sovereignist: "#BOLD Sovereignist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_theocrat: "#BOLD Theocrat#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_totalitarian: "#BOLD Totalitarian#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_traditionalist: "#BOLD Traditionalist#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"
+  SKY_B5_IDO_TT_utilitarian_millian: "#BOLD Utilitarian (Millian)#!\n\nAdds this ideology to the currently selected interest group (left click). Right click removes it again.\n\nSupported by: various.#!"

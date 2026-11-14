@@ -1,0 +1,1713 @@
+# ============================================================
+# CMPU UNIPOLAR PATCH - UNIPOLAR interest groups & ideologies
+# The 46 ideology buttons of the grid are handled here: they apply
+# the ideology to the currently selected interest group(s).
+# Only ideologies that really exist in UNIPOLAR are used.
+# ============================================================
+
+cmpu_ido_authoritarian_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_authoritarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_authoritarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_authoritarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_authoritarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_authoritarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_authoritarian } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_authoritarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_authoritarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_authoritarian } }
+	}
+}
+
+cmpu_ido_authoritarian_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_authoritarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_authoritarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_authoritarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_authoritarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_authoritarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_authoritarian } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_authoritarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_authoritarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_authoritarian } }
+	}
+}
+
+cmpu_ido_centre_economy_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_centre_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_centre_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_centre_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_centre_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_centre_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_centre_economy } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_centre_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_centre_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_centre_economy } }
+	}
+}
+
+cmpu_ido_centre_economy_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_centre_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_centre_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_centre_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_centre_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_centre_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_centre_economy } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_centre_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_centre_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_centre_economy } }
+	}
+}
+
+cmpu_ido_communist_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_communist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_communist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_communist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_communist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_communist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_communist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_communist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_communist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_communist } }
+	}
+}
+
+cmpu_ido_communist_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_communist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_communist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_communist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_communist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_communist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_communist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_communist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_communist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_communist } }
+	}
+}
+
+cmpu_ido_communitarian_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_communitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_communitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_communitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_communitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_communitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_communitarian } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_communitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_communitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_communitarian } }
+	}
+}
+
+cmpu_ido_communitarian_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_communitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_communitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_communitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_communitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_communitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_communitarian } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_communitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_communitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_communitarian } }
+	}
+}
+
+cmpu_ido_conservative_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_conservative } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_conservative } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_conservative } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_conservative } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_conservative } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_conservative } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_conservative } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_conservative } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_conservative } }
+	}
+}
+
+cmpu_ido_conservative_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_conservative } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_conservative } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_conservative } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_conservative } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_conservative } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_conservative } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_conservative } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_conservative } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_conservative } }
+	}
+}
+
+cmpu_ido_far_left_economy_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_far_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_far_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_far_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_far_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_far_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_far_left_economy } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_far_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_far_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_far_left_economy } }
+	}
+}
+
+cmpu_ido_far_left_economy_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_far_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_far_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_far_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_far_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_far_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_far_left_economy } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_far_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_far_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_far_left_economy } }
+	}
+}
+
+cmpu_ido_far_right_economy_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_far_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_far_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_far_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_far_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_far_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_far_right_economy } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_far_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_far_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_far_right_economy } }
+	}
+}
+
+cmpu_ido_far_right_economy_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_far_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_far_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_far_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_far_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_far_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_far_right_economy } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_far_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_far_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_far_right_economy } }
+	}
+}
+
+cmpu_ido_globalist_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_globalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_globalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_globalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_globalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_globalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_globalist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_globalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_globalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_globalist } }
+	}
+}
+
+cmpu_ido_globalist_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_globalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_globalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_globalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_globalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_globalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_globalist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_globalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_globalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_globalist } }
+	}
+}
+
+cmpu_ido_individualist_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_individualist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_individualist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_individualist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_individualist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_individualist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_individualist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_individualist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_individualist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_individualist } }
+	}
+}
+
+cmpu_ido_individualist_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_individualist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_individualist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_individualist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_individualist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_individualist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_individualist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_individualist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_individualist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_individualist } }
+	}
+}
+
+cmpu_ido_isolationist_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_isolationist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_isolationist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_isolationist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_isolationist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_isolationist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_isolationist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_isolationist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_isolationist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_isolationist } }
+	}
+}
+
+cmpu_ido_isolationist_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_isolationist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_isolationist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_isolationist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_isolationist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_isolationist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_isolationist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_isolationist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_isolationist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_isolationist } }
+	}
+}
+
+cmpu_ido_left_economy_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_left_economy } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_left_economy } }
+	}
+}
+
+cmpu_ido_left_economy_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_left_economy } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_left_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_left_economy } }
+	}
+}
+
+cmpu_ido_militarist_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_militarist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_militarist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_militarist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_militarist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_militarist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_militarist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_militarist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_militarist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_militarist } }
+	}
+}
+
+cmpu_ido_militarist_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_militarist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_militarist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_militarist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_militarist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_militarist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_militarist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_militarist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_militarist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_militarist } }
+	}
+}
+
+cmpu_ido_monarchist_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_monarchist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_monarchist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_monarchist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_monarchist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_monarchist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_monarchist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_monarchist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_monarchist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_monarchist } }
+	}
+}
+
+cmpu_ido_monarchist_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_monarchist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_monarchist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_monarchist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_monarchist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_monarchist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_monarchist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_monarchist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_monarchist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_monarchist } }
+	}
+}
+
+cmpu_ido_nationalist_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_nationalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_nationalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_nationalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_nationalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_nationalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_nationalist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_nationalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_nationalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_nationalist } }
+	}
+}
+
+cmpu_ido_nationalist_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_nationalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_nationalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_nationalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_nationalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_nationalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_nationalist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_nationalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_nationalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_nationalist } }
+	}
+}
+
+cmpu_ido_progressive_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_progressive } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_progressive } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_progressive } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_progressive } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_progressive } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_progressive } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_progressive } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_progressive } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_progressive } }
+	}
+}
+
+cmpu_ido_progressive_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_progressive } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_progressive } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_progressive } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_progressive } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_progressive } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_progressive } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_progressive } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_progressive } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_progressive } }
+	}
+}
+
+cmpu_ido_regionalist_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_regionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_regionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_regionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_regionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_regionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_regionalist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_regionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_regionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_regionalist } }
+	}
+}
+
+cmpu_ido_regionalist_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_regionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_regionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_regionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_regionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_regionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_regionalist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_regionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_regionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_regionalist } }
+	}
+}
+
+cmpu_ido_republican_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_republican } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_republican } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_republican } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_republican } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_republican } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_republican } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_republican } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_republican } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_republican } }
+	}
+}
+
+cmpu_ido_republican_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_republican } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_republican } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_republican } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_republican } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_republican } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_republican } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_republican } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_republican } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_republican } }
+	}
+}
+
+cmpu_ido_right_economy_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_right_economy } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_right_economy } }
+	}
+}
+
+cmpu_ido_right_economy_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_right_economy } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_right_economy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_right_economy } }
+	}
+}
+
+cmpu_ido_theocrat_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_theocrat } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_theocrat } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_theocrat } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_theocrat } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_theocrat } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_theocrat } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_theocrat } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_theocrat } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_theocrat } }
+	}
+}
+
+cmpu_ido_theocrat_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_theocrat } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_theocrat } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_theocrat } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_theocrat } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_theocrat } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_theocrat } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_theocrat } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_theocrat } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_theocrat } }
+	}
+}
+
+cmpu_ido_totalitarian_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_totalitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_totalitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_totalitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_totalitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_totalitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_totalitarian } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_totalitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_totalitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_totalitarian } }
+	}
+}
+
+cmpu_ido_totalitarian_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_totalitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_totalitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_totalitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_totalitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_totalitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_totalitarian } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_totalitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_totalitarian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_totalitarian } }
+	}
+}
+
+cmpu_ido_traditionalist_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_traditionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_traditionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_traditionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_traditionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_traditionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_traditionalist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_traditionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_traditionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_traditionalist } }
+	}
+}
+
+cmpu_ido_traditionalist_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_traditionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_traditionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_traditionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_traditionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_traditionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_traditionalist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_traditionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_traditionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_traditionalist } }
+	}
+}
+
+cmpu_ido_agrarian_jeffersonian_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_agrarian_jeffersonian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_agrarian_jeffersonian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_agrarian_jeffersonian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_agrarian_jeffersonian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_agrarian_jeffersonian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_agrarian_jeffersonian } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_agrarian_jeffersonian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_agrarian_jeffersonian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_agrarian_jeffersonian } }
+	}
+}
+
+cmpu_ido_agrarian_jeffersonian_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_agrarian_jeffersonian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_agrarian_jeffersonian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_agrarian_jeffersonian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_agrarian_jeffersonian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_agrarian_jeffersonian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_agrarian_jeffersonian } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_agrarian_jeffersonian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_agrarian_jeffersonian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_agrarian_jeffersonian } }
+	}
+}
+
+cmpu_ido_austrian_hegemony_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_austrian_hegemony } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_austrian_hegemony } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_austrian_hegemony } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_austrian_hegemony } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_austrian_hegemony } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_austrian_hegemony } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_austrian_hegemony } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_austrian_hegemony } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_austrian_hegemony } }
+	}
+}
+
+cmpu_ido_austrian_hegemony_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_austrian_hegemony } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_austrian_hegemony } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_austrian_hegemony } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_austrian_hegemony } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_austrian_hegemony } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_austrian_hegemony } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_austrian_hegemony } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_austrian_hegemony } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_austrian_hegemony } }
+	}
+}
+
+cmpu_ido_bakufu_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_bakufu } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_bakufu } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_bakufu } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_bakufu } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_bakufu } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_bakufu } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_bakufu } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_bakufu } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_bakufu } }
+	}
+}
+
+cmpu_ido_bakufu_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_bakufu } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_bakufu } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_bakufu } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_bakufu } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_bakufu } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_bakufu } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_bakufu } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_bakufu } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_bakufu } }
+	}
+}
+
+cmpu_ido_buddhist_moralist_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_buddhist_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_buddhist_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_buddhist_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_buddhist_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_buddhist_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_buddhist_moralist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_buddhist_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_buddhist_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_buddhist_moralist } }
+	}
+}
+
+cmpu_ido_buddhist_moralist_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_buddhist_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_buddhist_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_buddhist_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_buddhist_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_buddhist_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_buddhist_moralist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_buddhist_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_buddhist_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_buddhist_moralist } }
+	}
+}
+
+cmpu_ido_caudillismo_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_caudillismo } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_caudillismo } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_caudillismo } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_caudillismo } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_caudillismo } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_caudillismo } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_caudillismo } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_caudillismo } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_caudillismo } }
+	}
+}
+
+cmpu_ido_caudillismo_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_caudillismo } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_caudillismo } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_caudillismo } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_caudillismo } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_caudillismo } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_caudillismo } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_caudillismo } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_caudillismo } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_caudillismo } }
+	}
+}
+
+cmpu_ido_colonialist_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_colonialist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_colonialist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_colonialist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_colonialist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_colonialist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_colonialist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_colonialist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_colonialist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_colonialist } }
+	}
+}
+
+cmpu_ido_colonialist_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_colonialist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_colonialist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_colonialist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_colonialist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_colonialist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_colonialist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_colonialist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_colonialist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_colonialist } }
+	}
+}
+
+cmpu_ido_confucian_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_confucian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_confucian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_confucian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_confucian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_confucian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_confucian } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_confucian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_confucian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_confucian } }
+	}
+}
+
+cmpu_ido_confucian_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_confucian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_confucian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_confucian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_confucian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_confucian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_confucian } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_confucian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_confucian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_confucian } }
+	}
+}
+
+cmpu_ido_constitutionalist_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_constitutionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_constitutionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_constitutionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_constitutionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_constitutionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_constitutionalist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_constitutionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_constitutionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_constitutionalist } }
+	}
+}
+
+cmpu_ido_constitutionalist_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_constitutionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_constitutionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_constitutionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_constitutionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_constitutionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_constitutionalist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_constitutionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_constitutionalist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_constitutionalist } }
+	}
+}
+
+cmpu_ido_enclavist_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_enclavist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_enclavist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_enclavist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_enclavist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_enclavist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_enclavist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_enclavist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_enclavist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_enclavist } }
+	}
+}
+
+cmpu_ido_enclavist_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_enclavist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_enclavist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_enclavist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_enclavist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_enclavist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_enclavist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_enclavist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_enclavist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_enclavist } }
+	}
+}
+
+cmpu_ido_heavenly_kingdom_theocratic_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_heavenly_kingdom_theocratic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_heavenly_kingdom_theocratic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_heavenly_kingdom_theocratic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_heavenly_kingdom_theocratic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_heavenly_kingdom_theocratic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_heavenly_kingdom_theocratic } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_heavenly_kingdom_theocratic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_heavenly_kingdom_theocratic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_heavenly_kingdom_theocratic } }
+	}
+}
+
+cmpu_ido_heavenly_kingdom_theocratic_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_heavenly_kingdom_theocratic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_heavenly_kingdom_theocratic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_heavenly_kingdom_theocratic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_heavenly_kingdom_theocratic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_heavenly_kingdom_theocratic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_heavenly_kingdom_theocratic } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_heavenly_kingdom_theocratic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_heavenly_kingdom_theocratic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_heavenly_kingdom_theocratic } }
+	}
+}
+
+cmpu_ido_hindu_moralist_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_hindu_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_hindu_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_hindu_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_hindu_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_hindu_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_hindu_moralist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_hindu_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_hindu_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_hindu_moralist } }
+	}
+}
+
+cmpu_ido_hindu_moralist_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_hindu_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_hindu_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_hindu_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_hindu_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_hindu_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_hindu_moralist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_hindu_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_hindu_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_hindu_moralist } }
+	}
+}
+
+cmpu_ido_hindu_moralist_british_india_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_hindu_moralist_british_india } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_hindu_moralist_british_india } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_hindu_moralist_british_india } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_hindu_moralist_british_india } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_hindu_moralist_british_india } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_hindu_moralist_british_india } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_hindu_moralist_british_india } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_hindu_moralist_british_india } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_hindu_moralist_british_india } }
+	}
+}
+
+cmpu_ido_hindu_moralist_british_india_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_hindu_moralist_british_india } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_hindu_moralist_british_india } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_hindu_moralist_british_india } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_hindu_moralist_british_india } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_hindu_moralist_british_india } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_hindu_moralist_british_india } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_hindu_moralist_british_india } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_hindu_moralist_british_india } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_hindu_moralist_british_india } }
+	}
+}
+
+cmpu_ido_junker_paternalistic_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_junker_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_junker_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_junker_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_junker_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_junker_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_junker_paternalistic } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_junker_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_junker_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_junker_paternalistic } }
+	}
+}
+
+cmpu_ido_junker_paternalistic_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_junker_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_junker_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_junker_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_junker_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_junker_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_junker_paternalistic } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_junker_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_junker_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_junker_paternalistic } }
+	}
+}
+
+cmpu_ido_malthusian_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_malthusian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_malthusian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_malthusian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_malthusian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_malthusian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_malthusian } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_malthusian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_malthusian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_malthusian } }
+	}
+}
+
+cmpu_ido_malthusian_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_malthusian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_malthusian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_malthusian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_malthusian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_malthusian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_malthusian } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_malthusian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_malthusian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_malthusian } }
+	}
+}
+
+cmpu_ido_oriental_orthodox_patriarch_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_oriental_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_oriental_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_oriental_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_oriental_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_oriental_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_oriental_orthodox_patriarch } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_oriental_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_oriental_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_oriental_orthodox_patriarch } }
+	}
+}
+
+cmpu_ido_oriental_orthodox_patriarch_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_oriental_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_oriental_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_oriental_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_oriental_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_oriental_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_oriental_orthodox_patriarch } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_oriental_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_oriental_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_oriental_orthodox_patriarch } }
+	}
+}
+
+cmpu_ido_orthodox_patriarch_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_orthodox_patriarch } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_orthodox_patriarch } }
+	}
+}
+
+cmpu_ido_orthodox_patriarch_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_orthodox_patriarch } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_orthodox_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_orthodox_patriarch } }
+	}
+}
+
+cmpu_ido_papal_moralist_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_papal_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_papal_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_papal_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_papal_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_papal_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_papal_moralist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_papal_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_papal_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_papal_moralist } }
+	}
+}
+
+cmpu_ido_papal_moralist_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_papal_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_papal_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_papal_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_papal_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_papal_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_papal_moralist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_papal_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_papal_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_papal_moralist } }
+	}
+}
+
+cmpu_ido_papal_paternalistic_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_papal_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_papal_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_papal_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_papal_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_papal_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_papal_paternalistic } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_papal_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_papal_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_papal_paternalistic } }
+	}
+}
+
+cmpu_ido_papal_paternalistic_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_papal_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_papal_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_papal_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_papal_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_papal_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_papal_paternalistic } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_papal_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_papal_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_papal_paternalistic } }
+	}
+}
+
+cmpu_ido_russian_patriarch_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_russian_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_russian_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_russian_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_russian_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_russian_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_russian_patriarch } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_russian_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_russian_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_russian_patriarch } }
+	}
+}
+
+cmpu_ido_russian_patriarch_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_russian_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_russian_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_russian_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_russian_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_russian_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_russian_patriarch } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_russian_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_russian_patriarch } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_russian_patriarch } }
+	}
+}
+
+cmpu_ido_scholar_paternalistic_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_scholar_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_scholar_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_scholar_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_scholar_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_scholar_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_scholar_paternalistic } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_scholar_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_scholar_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_scholar_paternalistic } }
+	}
+}
+
+cmpu_ido_scholar_paternalistic_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_scholar_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_scholar_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_scholar_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_scholar_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_scholar_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_scholar_paternalistic } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_scholar_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_scholar_paternalistic } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_scholar_paternalistic } }
+	}
+}
+
+cmpu_ido_shinto_moralist_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_shinto_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_shinto_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_shinto_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_shinto_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_shinto_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_shinto_moralist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_shinto_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_shinto_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_shinto_moralist } }
+	}
+}
+
+cmpu_ido_shinto_moralist_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_shinto_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_shinto_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_shinto_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_shinto_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_shinto_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_shinto_moralist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_shinto_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_shinto_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_shinto_moralist } }
+	}
+}
+
+cmpu_ido_sikh_militancy_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_sikh_militancy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_sikh_militancy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_sikh_militancy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_sikh_militancy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_sikh_militancy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_sikh_militancy } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_sikh_militancy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_sikh_militancy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_sikh_militancy } }
+	}
+}
+
+cmpu_ido_sikh_militancy_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_sikh_militancy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_sikh_militancy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_sikh_militancy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_sikh_militancy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_sikh_militancy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_sikh_militancy } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_sikh_militancy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_sikh_militancy } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_sikh_militancy } }
+	}
+}
+
+cmpu_ido_sikh_moralist_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_sikh_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_sikh_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_sikh_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_sikh_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_sikh_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_sikh_moralist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_sikh_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_sikh_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_sikh_moralist } }
+	}
+}
+
+cmpu_ido_sikh_moralist_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_sikh_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_sikh_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_sikh_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_sikh_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_sikh_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_sikh_moralist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_sikh_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_sikh_moralist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_sikh_moralist } }
+	}
+}
+
+cmpu_ido_sovereignist_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_sovereignist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_sovereignist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_sovereignist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_sovereignist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_sovereignist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_sovereignist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_sovereignist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_sovereignist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_sovereignist } }
+	}
+}
+
+cmpu_ido_sovereignist_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_sovereignist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_sovereignist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_sovereignist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_sovereignist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_sovereignist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_sovereignist } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_sovereignist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_sovereignist } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_sovereignist } }
+	}
+}
+
+cmpu_ido_utilitarian_millian_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { add_ideology = ideology_utilitarian_millian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { add_ideology = ideology_utilitarian_millian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { add_ideology = ideology_utilitarian_millian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { add_ideology = ideology_utilitarian_millian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { add_ideology = ideology_utilitarian_millian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { add_ideology = ideology_utilitarian_millian } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { add_ideology = ideology_utilitarian_millian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { add_ideology = ideology_utilitarian_millian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { add_ideology = ideology_utilitarian_millian } }
+	}
+}
+
+cmpu_ido_utilitarian_millian_remove = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } ig:ig_armed_forces = { remove_ideology = ideology_utilitarian_millian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } ig:ig_devout = { remove_ideology = ideology_utilitarian_millian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } ig:ig_industrialists = { remove_ideology = ideology_utilitarian_millian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } ig:ig_intelligentsia = { remove_ideology = ideology_utilitarian_millian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } ig:ig_landowners = { remove_ideology = ideology_utilitarian_millian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } ig:ig_petty_bourgeoisie = { remove_ideology = ideology_utilitarian_millian } }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } ig:ig_professionals = { remove_ideology = ideology_utilitarian_millian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } ig:ig_rural_folk = { remove_ideology = ideology_utilitarian_millian } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } ig:ig_trade_unions = { remove_ideology = ideology_utilitarian_millian } }
+	}
+}
+
+# --- UNIPOLAR "Professionals" interest group selector ---
+cmpu_b5_select_professionals_check = { scope = country is_shown = { has_variable = cmpu_b5_sel_ig_professionals } }
+cmpu_b5_select_professionals_toggle = { scope = country is_shown = { is_player = yes } effect = { if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } remove_variable = cmpu_b5_sel_ig_professionals } else = { set_variable = { name = cmpu_b5_sel_ig_professionals } } } }
+cmpu_b5_select_professionals_solo = { scope = country is_shown = { is_player = yes } effect = {
+	remove_variable = sakuya_b5_sel_ig_armed_forces
+	remove_variable = sakuya_b5_sel_ig_devout
+	remove_variable = sakuya_b5_sel_ig_industrialists
+	remove_variable = sakuya_b5_sel_ig_intelligentsia
+	remove_variable = sakuya_b5_sel_ig_landowners
+	remove_variable = sakuya_b5_sel_ig_petty_bourgeoisie
+	remove_variable = cmpu_b5_sel_ig_professionals
+	remove_variable = sakuya_b5_sel_ig_rural_folk
+	remove_variable = sakuya_b5_sel_ig_trade_unions
+	set_variable = { name = cmpu_b5_sel_ig_professionals }
+} }
+
+# --- overrides: the "solo" (right click) selection of the vanilla IGs
+#     also clears the UNIPOLAR "Professionals" selection ---
+sakuya_b5_select_armed_forces_solo = { scope = country is_shown = { is_player = yes } effect = { remove_variable = sakuya_b5_sel_ig_armed_forces remove_variable = sakuya_b5_sel_ig_devout remove_variable = sakuya_b5_sel_ig_industrialists remove_variable = sakuya_b5_sel_ig_intelligentsia remove_variable = sakuya_b5_sel_ig_landowners remove_variable = sakuya_b5_sel_ig_petty_bourgeoisie remove_variable = sakuya_b5_sel_ig_rural_folk remove_variable = sakuya_b5_sel_ig_trade_unions set_variable = sakuya_b5_sel_ig_armed_forces } }
+
+
+sakuya_b5_select_devout_solo = { scope = country is_shown = { is_player = yes } effect = { remove_variable = sakuya_b5_sel_ig_armed_forces remove_variable = sakuya_b5_sel_ig_devout remove_variable = sakuya_b5_sel_ig_industrialists remove_variable = sakuya_b5_sel_ig_intelligentsia remove_variable = sakuya_b5_sel_ig_landowners remove_variable = sakuya_b5_sel_ig_petty_bourgeoisie remove_variable = sakuya_b5_sel_ig_rural_folk remove_variable = sakuya_b5_sel_ig_trade_unions set_variable = sakuya_b5_sel_ig_devout } }
+
+
+sakuya_b5_select_industrialists_solo = { scope = country is_shown = { is_player = yes } effect = { remove_variable = sakuya_b5_sel_ig_armed_forces remove_variable = sakuya_b5_sel_ig_devout remove_variable = sakuya_b5_sel_ig_industrialists remove_variable = sakuya_b5_sel_ig_intelligentsia remove_variable = sakuya_b5_sel_ig_landowners remove_variable = sakuya_b5_sel_ig_petty_bourgeoisie remove_variable = sakuya_b5_sel_ig_rural_folk remove_variable = sakuya_b5_sel_ig_trade_unions set_variable = sakuya_b5_sel_ig_industrialists } }
+
+
+sakuya_b5_select_intelligentsia_solo = { scope = country is_shown = { is_player = yes } effect = { remove_variable = sakuya_b5_sel_ig_armed_forces remove_variable = sakuya_b5_sel_ig_devout remove_variable = sakuya_b5_sel_ig_industrialists remove_variable = sakuya_b5_sel_ig_intelligentsia remove_variable = sakuya_b5_sel_ig_landowners remove_variable = sakuya_b5_sel_ig_petty_bourgeoisie remove_variable = sakuya_b5_sel_ig_rural_folk remove_variable = sakuya_b5_sel_ig_trade_unions set_variable = sakuya_b5_sel_ig_intelligentsia } }
+
+
+sakuya_b5_select_landowners_solo = { scope = country is_shown = { is_player = yes } effect = { remove_variable = sakuya_b5_sel_ig_armed_forces remove_variable = sakuya_b5_sel_ig_devout remove_variable = sakuya_b5_sel_ig_industrialists remove_variable = sakuya_b5_sel_ig_intelligentsia remove_variable = sakuya_b5_sel_ig_landowners remove_variable = sakuya_b5_sel_ig_petty_bourgeoisie remove_variable = sakuya_b5_sel_ig_rural_folk remove_variable = sakuya_b5_sel_ig_trade_unions set_variable = sakuya_b5_sel_ig_landowners } }
+
+
+sakuya_b5_select_petty_bourgeoisie_solo = { scope = country is_shown = { is_player = yes } effect = { remove_variable = sakuya_b5_sel_ig_armed_forces remove_variable = sakuya_b5_sel_ig_devout remove_variable = sakuya_b5_sel_ig_industrialists remove_variable = sakuya_b5_sel_ig_intelligentsia remove_variable = sakuya_b5_sel_ig_landowners remove_variable = sakuya_b5_sel_ig_petty_bourgeoisie remove_variable = sakuya_b5_sel_ig_rural_folk remove_variable = sakuya_b5_sel_ig_trade_unions set_variable = sakuya_b5_sel_ig_petty_bourgeoisie } }
+
+
+sakuya_b5_select_rural_folk_solo = { scope = country is_shown = { is_player = yes } effect = { remove_variable = sakuya_b5_sel_ig_armed_forces remove_variable = sakuya_b5_sel_ig_devout remove_variable = sakuya_b5_sel_ig_industrialists remove_variable = sakuya_b5_sel_ig_intelligentsia remove_variable = sakuya_b5_sel_ig_landowners remove_variable = sakuya_b5_sel_ig_petty_bourgeoisie remove_variable = sakuya_b5_sel_ig_rural_folk remove_variable = sakuya_b5_sel_ig_trade_unions set_variable = sakuya_b5_sel_ig_rural_folk } }
+
+
+sakuya_b5_select_trade_unions_solo = { scope = country is_shown = { is_player = yes } effect = { remove_variable = sakuya_b5_sel_ig_armed_forces remove_variable = sakuya_b5_sel_ig_devout remove_variable = sakuya_b5_sel_ig_industrialists remove_variable = sakuya_b5_sel_ig_intelligentsia remove_variable = sakuya_b5_sel_ig_landowners remove_variable = sakuya_b5_sel_ig_petty_bourgeoisie remove_variable = sakuya_b5_sel_ig_rural_folk remove_variable = sakuya_b5_sel_ig_trade_unions set_variable = sakuya_b5_sel_ig_trade_unions } }
+
+
+sakuya_b5_has_selection_check = {
+	scope = country
+	is_shown = {
+		OR = {
+			has_variable = sakuya_b5_sel_ig_armed_forces
+			has_variable = sakuya_b5_sel_ig_devout
+			has_variable = sakuya_b5_sel_ig_industrialists
+			has_variable = sakuya_b5_sel_ig_intelligentsia
+			has_variable = sakuya_b5_sel_ig_landowners
+			has_variable = sakuya_b5_sel_ig_petty_bourgeoisie
+			has_variable = sakuya_b5_sel_ig_rural_folk
+			has_variable = sakuya_b5_sel_ig_trade_unions
+			has_variable = cmpu_b5_sel_ig_professionals
+		}
+	}
+}
+
+# --- overrides: the interest group modifier buttons also work on
+#     the UNIPOLAR "Professionals" interest group ---
+sakuya_b5_sel_approval_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { NOT = { has_variable = sakuya_b5_sel_approval_mult } } set_variable = { name = sakuya_b5_sel_approval_mult value = 0 } }
+		change_variable = { name = sakuya_b5_sel_approval_mult add = 5 }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } remove_modifier = sakuya_cheat_b5_armed_forces_approval if = { limit = { has_variable = sakuya_b5_sel_approval_mult } add_modifier = { name = sakuya_cheat_b5_armed_forces_approval multiplier = var:sakuya_b5_sel_approval_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } remove_modifier = sakuya_cheat_b5_devout_approval if = { limit = { has_variable = sakuya_b5_sel_approval_mult } add_modifier = { name = sakuya_cheat_b5_devout_approval multiplier = var:sakuya_b5_sel_approval_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } remove_modifier = sakuya_cheat_b5_industrialists_approval if = { limit = { has_variable = sakuya_b5_sel_approval_mult } add_modifier = { name = sakuya_cheat_b5_industrialists_approval multiplier = var:sakuya_b5_sel_approval_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } remove_modifier = sakuya_cheat_b5_intelligentsia_approval if = { limit = { has_variable = sakuya_b5_sel_approval_mult } add_modifier = { name = sakuya_cheat_b5_intelligentsia_approval multiplier = var:sakuya_b5_sel_approval_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } remove_modifier = sakuya_cheat_b5_landowners_approval if = { limit = { has_variable = sakuya_b5_sel_approval_mult } add_modifier = { name = sakuya_cheat_b5_landowners_approval multiplier = var:sakuya_b5_sel_approval_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } remove_modifier = sakuya_cheat_b5_petty_bourgeoisie_approval if = { limit = { has_variable = sakuya_b5_sel_approval_mult } add_modifier = { name = sakuya_cheat_b5_petty_bourgeoisie_approval multiplier = var:sakuya_b5_sel_approval_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } remove_modifier = sakuya_cheat_b5_rural_folk_approval if = { limit = { has_variable = sakuya_b5_sel_approval_mult } add_modifier = { name = sakuya_cheat_b5_rural_folk_approval multiplier = var:sakuya_b5_sel_approval_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } remove_modifier = sakuya_cheat_b5_trade_unions_approval if = { limit = { has_variable = sakuya_b5_sel_approval_mult } add_modifier = { name = sakuya_cheat_b5_trade_unions_approval multiplier = var:sakuya_b5_sel_approval_mult } } }
+		if = { limit = { var:sakuya_b5_sel_approval_mult = 0 } remove_variable = sakuya_b5_sel_approval_mult remove_variable = sakuya_b5_sel_approval_active }
+		else = { set_variable = sakuya_b5_sel_approval_active }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } remove_modifier = cmpu_cheat_b5_professionals_approval if = { limit = { has_variable = sakuya_b5_sel_approval_mult } add_modifier = { name = cmpu_cheat_b5_professionals_approval multiplier = var:sakuya_b5_sel_approval_mult } } }
+	}
+}
+
+sakuya_b5_sel_approval_sub = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { NOT = { has_variable = sakuya_b5_sel_approval_mult } } set_variable = { name = sakuya_b5_sel_approval_mult value = 0 } }
+		change_variable = { name = sakuya_b5_sel_approval_mult add = -5 }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } remove_modifier = sakuya_cheat_b5_armed_forces_approval if = { limit = { has_variable = sakuya_b5_sel_approval_mult } add_modifier = { name = sakuya_cheat_b5_armed_forces_approval multiplier = var:sakuya_b5_sel_approval_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } remove_modifier = sakuya_cheat_b5_devout_approval if = { limit = { has_variable = sakuya_b5_sel_approval_mult } add_modifier = { name = sakuya_cheat_b5_devout_approval multiplier = var:sakuya_b5_sel_approval_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } remove_modifier = sakuya_cheat_b5_industrialists_approval if = { limit = { has_variable = sakuya_b5_sel_approval_mult } add_modifier = { name = sakuya_cheat_b5_industrialists_approval multiplier = var:sakuya_b5_sel_approval_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } remove_modifier = sakuya_cheat_b5_intelligentsia_approval if = { limit = { has_variable = sakuya_b5_sel_approval_mult } add_modifier = { name = sakuya_cheat_b5_intelligentsia_approval multiplier = var:sakuya_b5_sel_approval_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } remove_modifier = sakuya_cheat_b5_landowners_approval if = { limit = { has_variable = sakuya_b5_sel_approval_mult } add_modifier = { name = sakuya_cheat_b5_landowners_approval multiplier = var:sakuya_b5_sel_approval_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } remove_modifier = sakuya_cheat_b5_petty_bourgeoisie_approval if = { limit = { has_variable = sakuya_b5_sel_approval_mult } add_modifier = { name = sakuya_cheat_b5_petty_bourgeoisie_approval multiplier = var:sakuya_b5_sel_approval_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } remove_modifier = sakuya_cheat_b5_rural_folk_approval if = { limit = { has_variable = sakuya_b5_sel_approval_mult } add_modifier = { name = sakuya_cheat_b5_rural_folk_approval multiplier = var:sakuya_b5_sel_approval_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } remove_modifier = sakuya_cheat_b5_trade_unions_approval if = { limit = { has_variable = sakuya_b5_sel_approval_mult } add_modifier = { name = sakuya_cheat_b5_trade_unions_approval multiplier = var:sakuya_b5_sel_approval_mult } } }
+		if = { limit = { var:sakuya_b5_sel_approval_mult = 0 } remove_variable = sakuya_b5_sel_approval_mult remove_variable = sakuya_b5_sel_approval_active }
+		else = { set_variable = sakuya_b5_sel_approval_active }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } remove_modifier = cmpu_cheat_b5_professionals_approval if = { limit = { has_variable = sakuya_b5_sel_approval_mult } add_modifier = { name = cmpu_cheat_b5_professionals_approval multiplier = var:sakuya_b5_sel_approval_mult } } }
+	}
+}
+
+sakuya_b5_sel_approval_clear = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		remove_modifier = sakuya_cheat_b5_armed_forces_approval
+		remove_modifier = sakuya_cheat_b5_devout_approval
+		remove_modifier = sakuya_cheat_b5_industrialists_approval
+		remove_modifier = sakuya_cheat_b5_intelligentsia_approval
+		remove_modifier = sakuya_cheat_b5_landowners_approval
+		remove_modifier = sakuya_cheat_b5_petty_bourgeoisie_approval
+		remove_modifier = sakuya_cheat_b5_rural_folk_approval
+		remove_modifier = sakuya_cheat_b5_trade_unions_approval
+		remove_variable = sakuya_b5_sel_approval_mult
+		remove_variable = sakuya_b5_sel_approval_active
+		remove_modifier = cmpu_cheat_b5_professionals_approval
+	}
+}
+
+sakuya_b5_sel_pol_str_mult_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { NOT = { has_variable = sakuya_b5_sel_pol_str_mult_mult } } set_variable = { name = sakuya_b5_sel_pol_str_mult_mult value = 0 } }
+		change_variable = { name = sakuya_b5_sel_pol_str_mult_mult add = 0.2 }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } remove_modifier = sakuya_cheat_b5_armed_forces_pol_str_mult if = { limit = { has_variable = sakuya_b5_sel_pol_str_mult_mult } add_modifier = { name = sakuya_cheat_b5_armed_forces_pol_str_mult multiplier = var:sakuya_b5_sel_pol_str_mult_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } remove_modifier = sakuya_cheat_b5_devout_pol_str_mult if = { limit = { has_variable = sakuya_b5_sel_pol_str_mult_mult } add_modifier = { name = sakuya_cheat_b5_devout_pol_str_mult multiplier = var:sakuya_b5_sel_pol_str_mult_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } remove_modifier = sakuya_cheat_b5_industrialists_pol_str_mult if = { limit = { has_variable = sakuya_b5_sel_pol_str_mult_mult } add_modifier = { name = sakuya_cheat_b5_industrialists_pol_str_mult multiplier = var:sakuya_b5_sel_pol_str_mult_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } remove_modifier = sakuya_cheat_b5_intelligentsia_pol_str_mult if = { limit = { has_variable = sakuya_b5_sel_pol_str_mult_mult } add_modifier = { name = sakuya_cheat_b5_intelligentsia_pol_str_mult multiplier = var:sakuya_b5_sel_pol_str_mult_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } remove_modifier = sakuya_cheat_b5_landowners_pol_str_mult if = { limit = { has_variable = sakuya_b5_sel_pol_str_mult_mult } add_modifier = { name = sakuya_cheat_b5_landowners_pol_str_mult multiplier = var:sakuya_b5_sel_pol_str_mult_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } remove_modifier = sakuya_cheat_b5_petty_bourgeoisie_pol_str_mult if = { limit = { has_variable = sakuya_b5_sel_pol_str_mult_mult } add_modifier = { name = sakuya_cheat_b5_petty_bourgeoisie_pol_str_mult multiplier = var:sakuya_b5_sel_pol_str_mult_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } remove_modifier = sakuya_cheat_b5_rural_folk_pol_str_mult if = { limit = { has_variable = sakuya_b5_sel_pol_str_mult_mult } add_modifier = { name = sakuya_cheat_b5_rural_folk_pol_str_mult multiplier = var:sakuya_b5_sel_pol_str_mult_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } remove_modifier = sakuya_cheat_b5_trade_unions_pol_str_mult if = { limit = { has_variable = sakuya_b5_sel_pol_str_mult_mult } add_modifier = { name = sakuya_cheat_b5_trade_unions_pol_str_mult multiplier = var:sakuya_b5_sel_pol_str_mult_mult } } }
+		if = { limit = { var:sakuya_b5_sel_pol_str_mult_mult = 0 } remove_variable = sakuya_b5_sel_pol_str_mult_mult remove_variable = sakuya_b5_sel_pol_str_mult_active }
+		else = { set_variable = sakuya_b5_sel_pol_str_mult_active }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } remove_modifier = cmpu_cheat_b5_professionals_pol_str_mult if = { limit = { has_variable = sakuya_b5_sel_pol_str_mult_mult } add_modifier = { name = cmpu_cheat_b5_professionals_pol_str_mult multiplier = var:sakuya_b5_sel_pol_str_mult_mult } } }
+	}
+}
+
+sakuya_b5_sel_pol_str_mult_sub = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { NOT = { has_variable = sakuya_b5_sel_pol_str_mult_mult } } set_variable = { name = sakuya_b5_sel_pol_str_mult_mult value = 0 } }
+		change_variable = { name = sakuya_b5_sel_pol_str_mult_mult add = -0.2 }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } remove_modifier = sakuya_cheat_b5_armed_forces_pol_str_mult if = { limit = { has_variable = sakuya_b5_sel_pol_str_mult_mult } add_modifier = { name = sakuya_cheat_b5_armed_forces_pol_str_mult multiplier = var:sakuya_b5_sel_pol_str_mult_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } remove_modifier = sakuya_cheat_b5_devout_pol_str_mult if = { limit = { has_variable = sakuya_b5_sel_pol_str_mult_mult } add_modifier = { name = sakuya_cheat_b5_devout_pol_str_mult multiplier = var:sakuya_b5_sel_pol_str_mult_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } remove_modifier = sakuya_cheat_b5_industrialists_pol_str_mult if = { limit = { has_variable = sakuya_b5_sel_pol_str_mult_mult } add_modifier = { name = sakuya_cheat_b5_industrialists_pol_str_mult multiplier = var:sakuya_b5_sel_pol_str_mult_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } remove_modifier = sakuya_cheat_b5_intelligentsia_pol_str_mult if = { limit = { has_variable = sakuya_b5_sel_pol_str_mult_mult } add_modifier = { name = sakuya_cheat_b5_intelligentsia_pol_str_mult multiplier = var:sakuya_b5_sel_pol_str_mult_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } remove_modifier = sakuya_cheat_b5_landowners_pol_str_mult if = { limit = { has_variable = sakuya_b5_sel_pol_str_mult_mult } add_modifier = { name = sakuya_cheat_b5_landowners_pol_str_mult multiplier = var:sakuya_b5_sel_pol_str_mult_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } remove_modifier = sakuya_cheat_b5_petty_bourgeoisie_pol_str_mult if = { limit = { has_variable = sakuya_b5_sel_pol_str_mult_mult } add_modifier = { name = sakuya_cheat_b5_petty_bourgeoisie_pol_str_mult multiplier = var:sakuya_b5_sel_pol_str_mult_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } remove_modifier = sakuya_cheat_b5_rural_folk_pol_str_mult if = { limit = { has_variable = sakuya_b5_sel_pol_str_mult_mult } add_modifier = { name = sakuya_cheat_b5_rural_folk_pol_str_mult multiplier = var:sakuya_b5_sel_pol_str_mult_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } remove_modifier = sakuya_cheat_b5_trade_unions_pol_str_mult if = { limit = { has_variable = sakuya_b5_sel_pol_str_mult_mult } add_modifier = { name = sakuya_cheat_b5_trade_unions_pol_str_mult multiplier = var:sakuya_b5_sel_pol_str_mult_mult } } }
+		if = { limit = { var:sakuya_b5_sel_pol_str_mult_mult = 0 } remove_variable = sakuya_b5_sel_pol_str_mult_mult remove_variable = sakuya_b5_sel_pol_str_mult_active }
+		else = { set_variable = sakuya_b5_sel_pol_str_mult_active }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } remove_modifier = cmpu_cheat_b5_professionals_pol_str_mult if = { limit = { has_variable = sakuya_b5_sel_pol_str_mult_mult } add_modifier = { name = cmpu_cheat_b5_professionals_pol_str_mult multiplier = var:sakuya_b5_sel_pol_str_mult_mult } } }
+	}
+}
+
+sakuya_b5_sel_pol_str_mult_clear = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		remove_modifier = sakuya_cheat_b5_armed_forces_pol_str_mult
+		remove_modifier = sakuya_cheat_b5_devout_pol_str_mult
+		remove_modifier = sakuya_cheat_b5_industrialists_pol_str_mult
+		remove_modifier = sakuya_cheat_b5_intelligentsia_pol_str_mult
+		remove_modifier = sakuya_cheat_b5_landowners_pol_str_mult
+		remove_modifier = sakuya_cheat_b5_petty_bourgeoisie_pol_str_mult
+		remove_modifier = sakuya_cheat_b5_rural_folk_pol_str_mult
+		remove_modifier = sakuya_cheat_b5_trade_unions_pol_str_mult
+		remove_variable = sakuya_b5_sel_pol_str_mult_mult
+		remove_variable = sakuya_b5_sel_pol_str_mult_active
+		remove_modifier = cmpu_cheat_b5_professionals_pol_str_mult
+	}
+}
+
+sakuya_b5_sel_pop_attraction_add = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { NOT = { has_variable = sakuya_b5_sel_pop_attraction_mult } } set_variable = { name = sakuya_b5_sel_pop_attraction_mult value = 0 } }
+		change_variable = { name = sakuya_b5_sel_pop_attraction_mult add = 0.2 }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } remove_modifier = sakuya_cheat_b5_armed_forces_pop_attraction if = { limit = { has_variable = sakuya_b5_sel_pop_attraction_mult } add_modifier = { name = sakuya_cheat_b5_armed_forces_pop_attraction multiplier = var:sakuya_b5_sel_pop_attraction_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } remove_modifier = sakuya_cheat_b5_devout_pop_attraction if = { limit = { has_variable = sakuya_b5_sel_pop_attraction_mult } add_modifier = { name = sakuya_cheat_b5_devout_pop_attraction multiplier = var:sakuya_b5_sel_pop_attraction_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } remove_modifier = sakuya_cheat_b5_industrialists_pop_attraction if = { limit = { has_variable = sakuya_b5_sel_pop_attraction_mult } add_modifier = { name = sakuya_cheat_b5_industrialists_pop_attraction multiplier = var:sakuya_b5_sel_pop_attraction_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } remove_modifier = sakuya_cheat_b5_intelligentsia_pop_attraction if = { limit = { has_variable = sakuya_b5_sel_pop_attraction_mult } add_modifier = { name = sakuya_cheat_b5_intelligentsia_pop_attraction multiplier = var:sakuya_b5_sel_pop_attraction_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } remove_modifier = sakuya_cheat_b5_landowners_pop_attraction if = { limit = { has_variable = sakuya_b5_sel_pop_attraction_mult } add_modifier = { name = sakuya_cheat_b5_landowners_pop_attraction multiplier = var:sakuya_b5_sel_pop_attraction_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } remove_modifier = sakuya_cheat_b5_petty_bourgeoisie_pop_attraction if = { limit = { has_variable = sakuya_b5_sel_pop_attraction_mult } add_modifier = { name = sakuya_cheat_b5_petty_bourgeoisie_pop_attraction multiplier = var:sakuya_b5_sel_pop_attraction_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } remove_modifier = sakuya_cheat_b5_rural_folk_pop_attraction if = { limit = { has_variable = sakuya_b5_sel_pop_attraction_mult } add_modifier = { name = sakuya_cheat_b5_rural_folk_pop_attraction multiplier = var:sakuya_b5_sel_pop_attraction_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } remove_modifier = sakuya_cheat_b5_trade_unions_pop_attraction if = { limit = { has_variable = sakuya_b5_sel_pop_attraction_mult } add_modifier = { name = sakuya_cheat_b5_trade_unions_pop_attraction multiplier = var:sakuya_b5_sel_pop_attraction_mult } } }
+		if = { limit = { var:sakuya_b5_sel_pop_attraction_mult = 0 } remove_variable = sakuya_b5_sel_pop_attraction_mult remove_variable = sakuya_b5_sel_pop_attraction_active }
+		else = { set_variable = sakuya_b5_sel_pop_attraction_active }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } remove_modifier = cmpu_cheat_b5_professionals_pop_attraction_mult if = { limit = { has_variable = sakuya_b5_sel_pop_attraction_mult } add_modifier = { name = cmpu_cheat_b5_professionals_pop_attraction_mult multiplier = var:sakuya_b5_sel_pop_attraction_mult } } }
+	}
+}
+
+sakuya_b5_sel_pop_attraction_sub = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { NOT = { has_variable = sakuya_b5_sel_pop_attraction_mult } } set_variable = { name = sakuya_b5_sel_pop_attraction_mult value = 0 } }
+		change_variable = { name = sakuya_b5_sel_pop_attraction_mult add = -0.2 }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_armed_forces } remove_modifier = sakuya_cheat_b5_armed_forces_pop_attraction if = { limit = { has_variable = sakuya_b5_sel_pop_attraction_mult } add_modifier = { name = sakuya_cheat_b5_armed_forces_pop_attraction multiplier = var:sakuya_b5_sel_pop_attraction_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_devout } remove_modifier = sakuya_cheat_b5_devout_pop_attraction if = { limit = { has_variable = sakuya_b5_sel_pop_attraction_mult } add_modifier = { name = sakuya_cheat_b5_devout_pop_attraction multiplier = var:sakuya_b5_sel_pop_attraction_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_industrialists } remove_modifier = sakuya_cheat_b5_industrialists_pop_attraction if = { limit = { has_variable = sakuya_b5_sel_pop_attraction_mult } add_modifier = { name = sakuya_cheat_b5_industrialists_pop_attraction multiplier = var:sakuya_b5_sel_pop_attraction_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_intelligentsia } remove_modifier = sakuya_cheat_b5_intelligentsia_pop_attraction if = { limit = { has_variable = sakuya_b5_sel_pop_attraction_mult } add_modifier = { name = sakuya_cheat_b5_intelligentsia_pop_attraction multiplier = var:sakuya_b5_sel_pop_attraction_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_landowners } remove_modifier = sakuya_cheat_b5_landowners_pop_attraction if = { limit = { has_variable = sakuya_b5_sel_pop_attraction_mult } add_modifier = { name = sakuya_cheat_b5_landowners_pop_attraction multiplier = var:sakuya_b5_sel_pop_attraction_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_petty_bourgeoisie } remove_modifier = sakuya_cheat_b5_petty_bourgeoisie_pop_attraction if = { limit = { has_variable = sakuya_b5_sel_pop_attraction_mult } add_modifier = { name = sakuya_cheat_b5_petty_bourgeoisie_pop_attraction multiplier = var:sakuya_b5_sel_pop_attraction_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_rural_folk } remove_modifier = sakuya_cheat_b5_rural_folk_pop_attraction if = { limit = { has_variable = sakuya_b5_sel_pop_attraction_mult } add_modifier = { name = sakuya_cheat_b5_rural_folk_pop_attraction multiplier = var:sakuya_b5_sel_pop_attraction_mult } } }
+		if = { limit = { has_variable = sakuya_b5_sel_ig_trade_unions } remove_modifier = sakuya_cheat_b5_trade_unions_pop_attraction if = { limit = { has_variable = sakuya_b5_sel_pop_attraction_mult } add_modifier = { name = sakuya_cheat_b5_trade_unions_pop_attraction multiplier = var:sakuya_b5_sel_pop_attraction_mult } } }
+		if = { limit = { var:sakuya_b5_sel_pop_attraction_mult = 0 } remove_variable = sakuya_b5_sel_pop_attraction_mult remove_variable = sakuya_b5_sel_pop_attraction_active }
+		else = { set_variable = sakuya_b5_sel_pop_attraction_active }
+		if = { limit = { has_variable = cmpu_b5_sel_ig_professionals } remove_modifier = cmpu_cheat_b5_professionals_pop_attraction_mult if = { limit = { has_variable = sakuya_b5_sel_pop_attraction_mult } add_modifier = { name = cmpu_cheat_b5_professionals_pop_attraction_mult multiplier = var:sakuya_b5_sel_pop_attraction_mult } } }
+	}
+}
+
+sakuya_b5_sel_pop_attraction_clear = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		remove_modifier = sakuya_cheat_b5_armed_forces_pop_attraction
+		remove_modifier = sakuya_cheat_b5_devout_pop_attraction
+		remove_modifier = sakuya_cheat_b5_industrialists_pop_attraction
+		remove_modifier = sakuya_cheat_b5_intelligentsia_pop_attraction
+		remove_modifier = sakuya_cheat_b5_landowners_pop_attraction
+		remove_modifier = sakuya_cheat_b5_petty_bourgeoisie_pop_attraction
+		remove_modifier = sakuya_cheat_b5_rural_folk_pop_attraction
+		remove_modifier = sakuya_cheat_b5_trade_unions_pop_attraction
+		remove_variable = sakuya_b5_sel_pop_attraction_mult
+		remove_variable = sakuya_b5_sel_pop_attraction_active
+		remove_modifier = cmpu_cheat_b5_professionals_pop_attraction_mult
+	}
+}

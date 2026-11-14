@@ -1,0 +1,64 @@
+COMPLETE FIX PACKAGE - cmp_unipolar_patch_v2
+==============================================
+
+This zip contains TWO critical patches for the CMPU feedback panel issues.
+
+INSTALLATION:
+1. Close Victoria 3 completely
+2. Extract (unzip) this "complete_fix.zip" to your mod folder:
+   C:\Users\kelvi\OneDrive\Documents\Paradox Interactive\Victoria 3\mod\cmp_unipolar_patch_v2\
+3. When prompted, choose "Replace" all files
+4. Launch Victoria 3 with the cmp_unipolar_patch_v2 mod
+
+WHAT'S INCLUDED:
+
+FIX #1: List Variable Initialization
+-------------------------------
+File: common/script_values/cmpu_feedback_values.txt
+- Added: cmpu_fb_marked_states_list = {}
+- Purpose: Prevents "Failed to read key reference: : ," error from pdx_persistent_reader
+- Enables the Refresh button to properly clear and rebuild the marked states list
+- Without this, the GUI couldn't render the feedback panel at all
+
+FIX #2: Building Selection onclick Handlers
+------------------------------------------
+File: gui/main/sakuya_main.gui
+- Fixed: All 111 building widgets now have combined onclick handlers
+- Before: Two separate onclick lines; only the last one executed
+- After: Single onclick executing both actions:
+  onclick = "[GetVariableSystem.Set('sakuya_b6_selected_building', 'building_X'); 
+  GetScriptedGui('cmpu_select_building_X').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+- Purpose: Ensures BOTH:
+  1. The selected building variable (sakuya_b6_selected_building) IS set
+  2. The CMPU select script runs to mark the building
+- Previously, clicking a building only ran the CMPU select script but never set
+  the selected building variable, so the feedback panel didn't know which building to display
+
+ISSUES ADDRESSED:
+
+1. "Failed to read key reference: : ," error (578 occurrences in debug.log)
+   - Fixed by Fix #1 (list variable initialization)
+   - The GUI couldn't render because GetList() was called on a non-existent variable
+
+2. Panel disappearing on every building selection after click
+   - Partially fixed by Fix #1 (list variable now exists)
+   - Fix #2 ensures the building variable is set when clicking
+
+3. Feedback showing wrong building data
+   - Fixed by Fix #2 (onclick now sets sakuya_b6_selected_building variable)
+   - The feedback panel now correctly knows which building is selected
+
+4. Refresh button not bringing back the panel
+   - Fixed by Fix #1 (list variable now properly initialized and can be cleared/rebuilt)
+
+VERIFICATION:
+After installing, test:
+- Select a building in the CMPU selector → feedback should appear
+- Click another building → feedback should update to show the new building's data
+- Click the Refresh button → feedback should clear and rebuild properly
+- Check debug.log → "Failed to read key reference" errors should be greatly reduced
+
+NOTES:
+- This fix replaces/modifies files in the cmp_unipolar_patch_v2 mod only
+- Do NOT modify the "3717461054 Cheat Menu Pro" or "Cheat_Menu_Pro_UNIPOLAR_building_extension_v0.1" folders
+- A fresh game session is recommended after applying the fix

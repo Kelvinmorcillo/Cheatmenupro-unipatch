@@ -1,0 +1,36 @@
+FIX SUMMARY - cmp_unipolar_patch_v2
+
+ISSUES FIXED:
+1. List variable initialization (common/script_values/cmpu_feedback_values.txt)
+   - Added: cmpu_fb_marked_states_list = {}
+   - Purpose: Prevents GetList() error from pdx_persistent_reader
+   - Enables proper clearing/rebuilding of marked states list
+
+2. Building selection onclick handlers (gui/main/sakuya_main.gui)
+   - Fixed ALL 111 building widgets
+   - Combined two separate onclick handlers into one:
+     onclick = "[GetVariableSystem.Set('sakuya_b6_selected_building', 'building_X'); 
+     GetScriptedGui('cmpu_select_building_X').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+   - Purpose: Ensures both the selected building variable IS set AND the CMPU select script runs
+   - Previously, only the last onclick was executed, so sakuya_b6_selected_building was never set
+
+REMAINING ISSUE (user reports):
+- Feedback shows for banks, food services, pharma, software industries
+- Numbers update but don't change on selecting another building
+- Should only show the selected building
+
+POSSIBLE CAUSES INVESTIGATED:
+- All onclick handlers fixed (verified: 111 combined, 0 separate)
+- List variable initialized (verified: cmpu_fb_marked_states_list = {})
+- Clear effect structure verified (cmpu_b6_build_clear_all_selected_effect clears all sakuya_b6_build_sel_*)
+- Select script structure verified (clears all, sets new building's variable)
+
+SUGGESTED NEXT STEPS:
+1. completely restart Victoria 3 (not just save/reload)
+2. Verify the mod is enabled and the fix zip is in the mod folder
+3. Test with a new game session
+4. If issue persists, check debug.log for any remaining errors
+5. Verify the sakuya_b6_build_sel_* variables are being cleared/ set correctly
+
+The core "panel disappears on click" issue should be fixed by the list variable initialization.
+The building selection flow should work with the combined onclick handlers.

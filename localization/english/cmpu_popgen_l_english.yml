@@ -1,0 +1,20 @@
+l_english:
+  # ============================================================
+  # CMPU UNIPOLAR PATCH - population generator confirmation
+  # ============================================================
+  cmpu_popgen_confirm_title: "Confirm: Generate Population"
+  cmpu_popgen_confirm_yes: "Yes, generate them"
+  cmpu_popgen_confirm_no: "No, cancel"
+  cmpu_popgen_confirm_yes_tt: "#BOLD Generate the population#!\n\nExecutes the population generator with the values shown above. Nothing else is changed."
+  cmpu_popgen_confirm_no_tt: "#BOLD Cancel#!\n\nCloses this window without generating anything. Your selections are kept."
+  cmpu_popgen_confirm_amount: "Pops to ADD: [GetPlayer.MakeScope.ScriptValue('cmpu_popgen_amount_sv')|0]"
+  cmpu_popgen_confirm_workforce: "Workforce ratio: [GetPlayer.MakeScope.ScriptValue('cmpu_popgen_workforce_sv')|0]% of the new pops will be working adults"
+  cmpu_popgen_confirm_literacy: "Literacy of the new pops: [GetPlayer.MakeScope.ScriptValue('cmpu_popgen_literacy_sv')|0]%"
+  cmpu_popgen_culture_player: "Culture of the new pops: your country's primary culture"
+  cmpu_popgen_culture_marked: "Culture of the new pops: the marked country's primary culture"
+  cmpu_popgen_culture_selected: "Culture of the new pops: the culture you picked in the culture list"
+  cmpu_popgen_target_player: "Target: ONE of your marked states (picked at random). You have [GetPlayer.MakeScope.ScriptValue('cmpu_fb_player_marked_state_count_sv')|0] marked states."
+  cmpu_popgen_target_marked: "Target: ONE of the marked country's marked states (picked at random). [GetPlayer.MakeScope.ScriptValue('cmpu_fb_foreign_marked_state_count_sv')|0] foreign marked states."
+  cmpu_popgen_target_homeland: "Target: ALL of your homeland states ([GetPlayer.MakeScope.ScriptValue('cmpu_fb_homeland_state_count_sv')|0] states)."
+  cmpu_popgen_confirm_note: "#BOLD How this works:#! The pops are created instantly, in the same tick - not over time. They are ADDED to the target state(s); existing population is never removed, so a smaller number than the current population will not subtract anything. The state religion of the country is used for the new pops."
+

@@ -1,0 +1,42 @@
+CMPU UNIPOLAR PATCH - CHANGELOG & FIX HISTORY
+=============================================
+
+ISSUE: Building selected in CMPU mod selector does not appear in feedback GUI.
+GUI shows "None Selected" and feedback shows multiple fixed buildings at once.
+
+ROOT CAUSES FOUND:
+1. cmpu_select_X scripted GUIs called sakuya_b6_build_select_building_effect
+   which was NEVER DEFINED in the mod (only mentioned in a comment).
+   Result: No building variable was ever set.
+2. onclick handlers had broken format (missing ; separators, missing ] brackets).
+3. cmpu_select_X never set sakuya_b6_selected_building variable.
+4. Feedback GUI checks used sakuya_b6_build_sel_X variables but multiple were
+   set to 1 at once, causing multiple buildings to show.
+
+FIXES APPLIED:
+1. gui/main/sakuya_main.gui - All 111 onclick handlers now only call
+   GetScriptedGui('cmpu_select_X').Execute(). No Set/Clear calls in onclick.
+2. common/scripted_guis/zz_cmpu_scripted_guis.txt - All 118 cmpu_select_X
+   entries changed from undefined sakuya_b6_build_select_building_effect to:
+     cmpu_b6_build_clear_all_selected_effect = yes
+     set_variable = { name = sakuya_b6_build_sel_X value = 1 }
+     set_variable = { name = sakuya_b6_selected_building value = building_X }
+3. common/scripted_guis/cmpu_feedback_guis.txt - All feedback GUI checks use
+   has_variable = sakuya_b6_build_sel_X (original working format).
+4. common/script_values/cmpu_feedback_values.txt - cmpu_fb_marked_states_list
+   = {} present.
+
+HOW IT WORKS NOW:
+  1. Click building -> onclick calls cmpu_select_X only
+  2. cmpu_select_X clears ALL sakuya_b6_build_sel_* variables to 0
+  3. cmpu_select_X sets sakuya_b6_build_sel_X = 1 for selected building
+  4. cmpu_select_X sets sakuya_b6_selected_building = building_X
+  5. Feedback GUI checks has_variable = sakuya_b6_build_sel_X
+  6. Only ONE variable is 1 -> only selected building shows
+
+INSTALLATION:
+  1. Close Victoria 3 completely
+  2. Extract this zip to the mod folder
+  3. Choose "Replace" all files
+  4. Launch Victoria 3 with cmp_unipolar_patch_v2 mod
+  5. Click any building in CMPU selector -> feedback shows selected building

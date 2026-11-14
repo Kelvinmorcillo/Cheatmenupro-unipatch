@@ -1,0 +1,2189 @@
+# ============================================================
+# CMPU UNIPOLAR PATCH - ADDITIVE FEEDBACK SCRIPT VALUES
+# Read-only counters used by the feedback panel in sakuya_main.gui.
+# Every script value here only reads game state (marked states,
+# existing building levels) and never writes anything.
+# All names are unique (cmpu_fb_ prefix).
+#
+# Level sums count existing levels of the given building type
+# across BOTH marked target sets, mirroring the injector's two
+# confirm paths:
+#  - player-marked states (decree_sakuya_mark_state holders)
+#  - foreign marked states (sakuya_mark_foreign_state_target)
+# ============================================================
+
+# --- Pre-initialized list variable ---
+# Must exist before GetList() is called in GUI datamodel
+# This ensures the list is available for reading without error
+# Using {} ensures it's an empty list suitable for clear_variable_list/add_to_variable_list
+cmpu_fb_marked_states_list = {}
+
+# --- Marked target counters ---
+
+cmpu_fb_building_count_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			add = 1
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			add = 1
+		}
+	}
+}
+
+cmpu_fb_player_marked_state_count_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		add = 1
+	}
+}
+
+cmpu_fb_foreign_marked_state_count_sv = {
+	value = 0
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		add = 1
+	}
+}
+
+cmpu_fb_homeland_state_count_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { is_homeland_of_country_cultures = root }
+		add = 1
+	}
+}
+
+# --- Existing building levels per injector building (24) ---
+
+cmpu_fb_levels_war_machine_industry_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_war_machine_industry }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_war_machine_industry }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_chip_industry_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_chip_industry }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_chip_industry }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_computer_industry_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_computer_industry }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_computer_industry }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_appliance_manufactory_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_appliance_manufactory }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_appliance_manufactory }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_aeronautics_industry_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_aeronautics_industry }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_aeronautics_industry }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_army_logistics_center_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_army_logistics_center }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_army_logistics_center }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_nuclear_plant_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_nuclear_plant }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_nuclear_plant }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_green_plant_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_green_plant }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_green_plant }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_airport_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_airport }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_airport }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_spaceport_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_spaceport }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_spaceport }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_telecommunications_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_telecommunications }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_telecommunications }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_professional_service_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_professional_service }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_professional_service }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_bank_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_bank }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_bank }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_food_service_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_food_service }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_food_service }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_retail_services_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_retail_services }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_retail_services }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_advertising_agency_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_advertising_agency }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_advertising_agency }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_warehouse_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_warehouse }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_warehouse }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_pharmaceutical_services_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_pharmaceutical_services }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_pharmaceutical_services }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_software_industry_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_software_industry }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_software_industry }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_nuclear_silo_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_nuclear_silo }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_nuclear_silo }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_ouro_preto_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_ouro_preto }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_ouro_preto }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_teatro_amazonas_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_teatro_amazonas }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_teatro_amazonas }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_brasilia_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_brasilia }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_brasilia }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_world_trade_center_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_world_trade_center }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_world_trade_center }
+			add = level
+		}
+	}
+}
+
+# --- Existing levels per vanilla injector building (94) ---
+
+cmpu_fb_levels_coal_mine_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_coal_mine }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_coal_mine }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_iron_mine_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_iron_mine }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_iron_mine }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_lead_mine_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_lead_mine }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_lead_mine }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_sulfur_mine_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_sulfur_mine }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_sulfur_mine }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_gold_mine_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_gold_mine }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_gold_mine }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_gold_field_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_gold_field }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_gold_field }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_logging_camp_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_logging_camp }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_logging_camp }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_rubber_plantation_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_rubber_plantation }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_rubber_plantation }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_fishing_wharf_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_fishing_wharf }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_fishing_wharf }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_whaling_station_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_whaling_station }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_whaling_station }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_oil_rig_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_oil_rig }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_oil_rig }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_power_plant_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_power_plant }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_power_plant }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_university_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_university }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_university }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_railway_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_railway }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_railway }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_construction_sector_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_construction_sector }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_construction_sector }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_government_administration_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_government_administration }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_government_administration }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_port_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_port }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_port }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_barrack_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_barrack }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_barrack }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_conscription_center_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_conscription_center }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_conscription_center }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_naval_administration_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_naval_administration }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_naval_administration }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_naval_fortification_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_naval_fortification }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_naval_fortification }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_naval_logistics_center_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_naval_logistics_center }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_naval_logistics_center }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_rye_farm_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_rye_farm }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_rye_farm }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_wheat_farm_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_wheat_farm }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_wheat_farm }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_rice_farm_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_rice_farm }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_rice_farm }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_maize_farm_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_maize_farm }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_maize_farm }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_millet_farm_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_millet_farm }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_millet_farm }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_livestock_ranch_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_livestock_ranch }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_livestock_ranch }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_vineyard_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_vineyard }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_vineyard }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_coffee_plantation_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_coffee_plantation }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_coffee_plantation }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_cotton_plantation_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_cotton_plantation }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_cotton_plantation }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_dye_plantation_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_dye_plantation }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_dye_plantation }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_opium_plantation_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_opium_plantation }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_opium_plantation }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_tea_plantation_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_tea_plantation }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_tea_plantation }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_tobacco_plantation_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_tobacco_plantation }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_tobacco_plantation }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_sugar_plantation_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_sugar_plantation }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_sugar_plantation }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_banana_plantation_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_banana_plantation }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_banana_plantation }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_silk_plantation_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_silk_plantation }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_silk_plantation }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_food_industry_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_food_industry }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_food_industry }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_textile_mill_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_textile_mill }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_textile_mill }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_furniture_manufactory_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_furniture_manufactory }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_furniture_manufactory }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_glassworks_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_glassworks }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_glassworks }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_tooling_workshop_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_tooling_workshop }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_tooling_workshop }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_paper_mill_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_paper_mill }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_paper_mill }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_chemical_plant_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_chemical_plant }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_chemical_plant }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_explosives_factory_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_explosives_factory }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_explosives_factory }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_synthetics_plant_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_synthetics_plant }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_synthetics_plant }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_steel_mill_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_steel_mill }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_steel_mill }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_motor_industry_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_motor_industry }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_motor_industry }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_shipyard_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_shipyard }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_shipyard }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_automotive_industry_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_automotive_industry }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_automotive_industry }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_electrics_industry_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_electrics_industry }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_electrics_industry }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_arms_industry_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_arms_industry }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_arms_industry }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_artillery_foundry_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_artillery_foundry }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_artillery_foundry }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_munition_plant_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_munition_plant }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_munition_plant }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_art_academy_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_art_academy }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_art_academy }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_urban_center_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_urban_center }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_urban_center }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_trade_center_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_trade_center }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_trade_center }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_manor_house_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_manor_house }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_manor_house }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_financial_district_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_financial_district }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_financial_district }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_company_headquarter_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_company_headquarter }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_company_headquarter }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_company_regional_headquarter_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_company_regional_headquarter }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_company_regional_headquarter }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_skyscraper_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_skyscraper }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_skyscraper }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_suez_canal_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_suez_canal }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_suez_canal }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_panama_canal_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_panama_canal }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_panama_canal }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_eiffel_tower_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_eiffel_tower }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_eiffel_tower }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_angkor_wat_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_angkor_wat }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_angkor_wat }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_big_ben_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_big_ben }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_big_ben }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_forbidden_city_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_forbidden_city }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_forbidden_city }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_hagia_sophia_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_hagia_sophia }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_hagia_sophia }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_mosque_of_djenne_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_mosque_of_djenne }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_mosque_of_djenne }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_saint_basils_cathedral_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_saint_basils_cathedral }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_saint_basils_cathedral }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_statue_of_liberty_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_statue_of_liberty }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_statue_of_liberty }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_taj_mahal_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_taj_mahal }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_taj_mahal }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_vatican_city_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_vatican_city }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_vatican_city }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_white_house_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_white_house }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_white_house }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_cristo_redentor_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_cristo_redentor }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_cristo_redentor }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_power_bloc_statue_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_power_bloc_statue }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_power_bloc_statue }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_victoria_terminus_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_victoria_terminus }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_victoria_terminus }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_kaiserforum_1_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_kaiserforum_1 }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_kaiserforum_1 }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_kaiserforum_2_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_kaiserforum_2 }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_kaiserforum_2 }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_kaiserforum_3_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_kaiserforum_3 }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_kaiserforum_3 }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_kaiserforum_4_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_kaiserforum_4 }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_kaiserforum_4 }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_sagrada_familia_cathedral_1_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_sagrada_familia_cathedral_1 }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_sagrada_familia_cathedral_1 }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_sagrada_familia_cathedral_2_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_sagrada_familia_cathedral_2 }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_sagrada_familia_cathedral_2 }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_sagrada_familia_cathedral_3_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_sagrada_familia_cathedral_3 }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_sagrada_familia_cathedral_3 }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_pena_palace_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_pena_palace }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_pena_palace }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_gran_teatro_de_la_habana_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_gran_teatro_de_la_habana }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_gran_teatro_de_la_habana }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_estacion_de_madrid_atocha_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_estacion_de_madrid_atocha }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_estacion_de_madrid_atocha }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_manila_cathedral_monument_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_manila_cathedral_monument }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_manila_cathedral_monument }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_machu_picchu_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_machu_picchu }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_machu_picchu }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_pena_convent_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_pena_convent }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_pena_convent }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_manila_cathedral_original_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_manila_cathedral_original }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_manila_cathedral_original }
+			add = level
+		}
+	}
+}
+
+cmpu_fb_levels_manila_cathedral_ruins_sv = {
+	value = 0
+	every_scope_state = {
+		limit = { has_decree = decree_sakuya_mark_state }
+		every_scope_building = {
+			limit = { is_building_type = building_manila_cathedral_ruins }
+			add = level
+		}
+	}
+	every_state = {
+		limit = { has_variable = sakuya_mark_foreign_state_target }
+		every_scope_building = {
+			limit = { is_building_type = building_manila_cathedral_ruins }
+			add = level
+		}
+	}
+}

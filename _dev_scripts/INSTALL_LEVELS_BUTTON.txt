@@ -1,0 +1,73 @@
+CMPU UNIPOLAR COMPATIBILITY PATCH v2 - v1.2.0
+"LEVELS IN MARKED STATES" BUTTON
+=============================================================
+
+WHAT THIS DOES
+-------------------------------------------------------------
+1. A new green button labelled "Levels: N" now sits between the
+   "Building" and "Building Adjust" tabs of the Cheat Menu Pro
+   "State and Building" panel.
+
+   It shows, live and read-only, how many levels the building that is
+   currently selected in the CMPU building picker already has in the
+   states that are marked for the cheat mechanics
+   (your own marked states + the marked country's marked states).
+
+   The number comes from the same script values the old feedback list
+   used (cmpu_fb_levels_<building>_sv), so the figures are identical to
+   the ones you could already see - they are just no longer dumped over
+   the whole screen.
+
+2. The oversized feedback drawer at the bottom of the screen is now
+   HIDDEN BY DEFAULT. It used to be visible at all times and listed
+   every single building at once, which overflowed the HUD.
+   Click the new "Levels" button to open it - it now shows only the
+   currently selected building, plus a Close button.
+
+3. The "Selected Building" indicator (building icon + name) under the
+   tab column was moved down by 5 pixels so the new button does not
+   overlap it. It still works exactly as before.
+
+4. BUG FIX: the "Selected Building" indicator never appeared for the 24
+   UNIPOLAR special buildings (War Machine Industry, Chip Industry,
+   Airport, Green Plant, Nuclear Plant, World Trade Center, ...). Those
+   24 entries were checking the variable against the wrong key
+   ("airport" instead of "building_airport"), so they could never be
+   shown. They now work like all the other buildings.
+
+5. The mod folder contained a stale duplicate of the Cheat Menu Pro GUI
+   file at gui\sakuya_main.gui (an older revision that only had 24 of the
+   118 building hooks). Two files defining the same template can shadow
+   each other depending on load order, so that duplicate was overwritten
+   with the patched file - both copies are now byte-identical.
+
+NOTHING IN THE CHEAT MECHANICS WAS TOUCHED
+-------------------------------------------------------------
+* No scripted effect, no selector, no building injector logic was
+  changed. Only the .gui layout, the visibility gates of the read-only
+  feedback rows and new English localization strings were added.
+* The new button only sets a UI variable (cmpu_lv_info_open) that
+  shows/hides an information box. It never touches buildings, states,
+  marks or decrees.
+
+INSTALLATION
+-------------------------------------------------------------
+1. Close Victoria 3 completely.
+2. Extract this zip into your Victoria 3 mod folder
+   (usually ...\Documents\Paradox Interactive\Victoria 3\mod\).
+   The zip contains a folder called "cmp_unipolar_patch_v2"; choose
+   "Replace" / "Overwrite" for the two files.
+3. Launch Victoria 3 and enable:
+      - Cheat Menu Pro                            (3717461054)
+      - Cheat Menu Pro - UNIPOLAR Compatibility Patch2
+   The patch MUST be loaded after Cheat Menu Pro.
+4. Open the cheat menu -> "State and Building" -> "Building" tab,
+   pick a building in the picker and look at the new green button
+   between "Building" and "Building Adjust".
+
+ROLLBACK
+-------------------------------------------------------------
+Backups of the two replaced files are kept inside the mod folder as
+   gui\main\sakuya_main.gui.pre_levels_backup
+   localization\english\cmpu_feedback_l_english.yml.pre_levels_backup
+Copy them back over the patched files to undo everything.

@@ -1,68 +1,105 @@
-CHEAT MENU PRO - UNIPOLAR COMPATIBILITY PATCH
-Victoria 3 1.13.x | Version 1.1.0
+CMPU UNIPOLAR COMPATIBILITY PATCH v2   -   v1.3.0
+Cheat Menu Pro (3717461054) + UNIPOLAR (pdx_118232)
+================================================================
 
-NORMAL MOD PACKAGE: no PowerShell, BAT, Python, DLL, EXE, or external installer.
+INSTALLATION
+----------------------------------------------------------------
+1. Close Victoria 3 completely.
+2. Extract the zip into ...\Documents\Paradox Interactive\Victoria 3\mod\
+   (choose "Replace" for the files).
+3. Enable BOTH mods, the patch AFTER Cheat Menu Pro:
+      - Cheat Menu Pro                                  (3717461054)
+      - Cheat Menu Pro - UNIPOLAR Compatibility Patch2
+4. Start a game. Open the cheat menu -> "State and Building".
 
-INSTALL
-1. Close Victoria 3 and the Paradox launcher.
-2. Extract the cmp_unipolar_patch_v2 folder into:
-   Documents/Paradox Interactive/Victoria 3/mod/
-3. The metadata path must be:
-   Documents/Paradox Interactive/Victoria 3/mod/cmp_unipolar_patch_v2/.metadata/metadata.json
-4. Open the launcher > Playsets > your playset > Add more mods.
-5. Add Cheat Menu Pro - UNIPOLAR Compatibility Patch and enable it LAST:
-   UNIPOLAR
-   UNIPOLAR Brazil compatibility additions, if used
-   Original Cheat Menu Pro (3717461054) -- KEEP THIS ENABLED
-   Cheat Menu Pro - UNIPOLAR Compatibility Patch
-6. Start the game normally. No console/debug mode is required.
+WHAT THIS PATCH DOES (v1.0 - v1.3)
+================================================================
 
-BUILDINGS / INSTANT BUILD
-Regions and Buildings > Buildings tab now includes the missing UNIPOLAR buildings:
-Pharmaceutical Services, Software Industry, Banks, Food/Retail Services,
-Advertising, Warehouses, War Machine/Chip/Computer/Appliance/Aeronautics,
-Army Logistics, Nuclear/Green/Airport/Spaceport, Telecommunications, Nuclear Silo,
-and selected Brazilian monuments/World Trade Center.
-Choose a building and level using the original arrows.
-Left confirmation: all player states.
-Alt confirmation: incorporated player states only.
-Right confirmation: marked own states, falling back to marked foreign states.
-Level 0 removes the selected building. This sets a minimum, not an added number.
-Buildings start with full cash reserves. Cheats bypass the normal construction
-queue/cost and can bypass placement/unique restrictions. For monuments, select
-one target state rather than all player states. Massive levels can freeze the game.
+1) "LEVELS" BUTTON  (State and Building -> Building tab)
+----------------------------------------------------------------
+A green button labelled "Levels: N" now sits between the "Building" and
+"Building Adjust" tabs. It shows how many levels the building that is
+currently selected in the building picker already has in the states that
+are marked for the cheat mechanics. Read-only, updates live.
 
-CONSTRUCTION
-Quick Modification > Fast Construction:
-Left +10% efficiency; Shift +100%; Alt +1000%; Ctrl -10%; right reset.
-Adjacent plus: +1000 per-project weekly construction cap toggle.
-Ctrl on adjacent plus: +10 percentage points private allocation.
-Right on adjacent plus: -10 percentage points private allocation.
-Economy > Construction Goods Cost / Private Construction:
-Player controls use native engine modifiers and persistent steps.
-Target-country arrows retain original menu target routing.
-Regions and Buildings > new Country Construction Output:
-+100 / Shift +1000 / Alt +10000 / Ctrl -100 / right reset.
-This supplies construction points; it is not construction efficiency.
+2) THE OVERFLOWING FEEDBACK LIST IS GONE
+----------------------------------------------------------------
+The old feedback drawer was permanently visible and listed every building
+at once, which flooded the screen. It is now hidden by default and, when
+opened with the "Levels" button, shows only the currently selected
+building plus a Close button.
 
-TECH / RESEARCH
-Original Cheat Menu Pro technology buttons and callbacks are retained unchanged.
-The supplied error logs contain no technology-related script errors. Do not use
-the patch to alter technology research unless a specific UNIPOLAR technology
-fails; adding blind compatibility effects could create invalid database references.
+3) "SELECTED BUILDING" INDICATOR FIXED
+----------------------------------------------------------------
+The indicator never appeared for the 24 UNIPOLAR special buildings (they
+were checked against the wrong key, e.g. "airport" instead of
+"building_airport"). It works now. It was also moved down 5 px so the
+new Levels button does not overlap it.
 
-PRESERVED
-Unrelated menu sections, original assets, wages/cash-reserve buttons, country
-targeting and other helpers remain supplied by the original mod. This patch is
-not a promise that every unrelated vanilla-only cheat supports UNIPOLAR content.
-The overlay fix from the prior package is not included here because this is a
-small additive compatibility patch; it does not alter the pause decoration.
+4) INTEREST GROUPS AND IDEOLOGIES REBUILT FOR UNIPOLAR
+----------------------------------------------------------------
+THIS IS THE "SOME THINGS WORK, SOME DON'T" PROBLEM.
 
-REMOVAL
-Disable this patch in the launcher. The original Workshop files and UNIPOLAR
-files are not modified on disk.
+UNIPOLAR replaces common/ideologies/00_ig_ideologies.txt and replaces the
+vanilla interest group definitions with its own versions:
 
-VALIDATION
-Static checks cover metadata, brace/string balance, unique definitions, GUI
-action references, native modifier names, building IDs/groups/icons, and ZIP
-contents. No in-game runtime playtest is claimed.
+  * 26 vanilla ideologies were DELETED (liberal, reactionary, jingoist,
+    loyalist, patriotic, moralist, pious, socialist, ...).
+    55 of the 77 ideology buttons of the cheat menu pointed at those
+    deleted ideologies, so clicking them did NOTHING (silent no-op).
+  * UNIPOLAR has its own 21 ideologies (Right/Left/Far Left Economy,
+    Globalist, Nationalist, Regionalist, Totalitarian, Authoritarian,
+    Communitarian, Traditionalist, Conservative, Progressive, Monarchist,
+    Republican, Theocrat, Militarist, Communist, ...) and its own
+    interest group list, which also includes a 9th group:
+    "Professionals" (ig_professionals).
+
+What this patch does:
+  * The ideology grid now shows the 46 ideologies that really exist in
+    UNIPOLAR, with their real names, their real icons and a tooltip that
+    lists the interest groups supporting each of them.
+    Left click adds the ideology to the selected interest group,
+    right click removes it.
+  * "Professionals" was added to the interest group selector row, and the
+    approval / political strength / pop attraction buttons now work on it
+    as well.
+  * The vanilla 8 interest groups keep working exactly as before
+    (their modifier types still exist in the game).
+
+5) POPULATION GENERATOR - CONFIRMATION POPUP
+----------------------------------------------------------------
+The Population tab of the State and Building panel was confusing. Now
+every "Start" button opens a confirmation window that spells out what is
+going to happen before anything is executed:
+
+  * how many pops will be ADDED
+  * the workforce ratio (how many of them are working adults)
+  * the literacy of the new pops
+  * which culture they will get
+  * where they will appear:
+      - "Spawn at Home"      -> ONE of your marked states (picked at random)
+      - "Spawn in Target"    -> ONE of the marked country's marked states
+      - alt-click on "Start" -> ALL of your homeland states
+  * and the important bit: the pops are created INSTANTLY (same tick),
+    they are ADDED to the target state and existing population is never
+    removed - a smaller number than the current population does not
+    subtract anything.
+
+ROLLBACK
+----------------------------------------------------------------
+Backups of the replaced files are in the _dev_scripts folder:
+   gui_main_sakuya_main.gui.pre_levels_backup
+   gui_main_sakuya_main.gui.pre_unipolar_ig_backup
+   gui_main_sakuya_main.gui.pre_popgen_backup
+   loc_cmpu_feedback_l_english.yml.pre_levels_backup
+Copy them back over the patched files to undo everything.
+
+FOLDER CONTENTS
+----------------------------------------------------------------
+.metadata/           mod metadata
+common/              scripted guis, script values, static modifiers
+gui/                 the Cheat Menu Pro interface (patched copy)
+localization/english/ English strings of the patch
+_dev_scripts/        development leftovers (python scripts, old zips,
+                      backups). The game ignores this folder, it is only
+                      there so the mod folder is not full of junk.

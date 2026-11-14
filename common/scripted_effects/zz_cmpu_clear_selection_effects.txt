@@ -1,0 +1,124 @@
+# ============================================================
+# CMPU UNIPOLAR PATCH - FULL SELECTION CLEAR
+# Clears EVERY building-selection flag the injector can set
+# (all 94 vanilla + all 24 UNIPOLAR). The vanilla Cheat Menu
+# clear list does not know the UNIPOLAR variable names, which
+# let stale flags accumulate and broke the feedback. Called by
+# every cmpu_select_* wrapper before selecting. Read-only w.r.t.
+# gameplay: it only clears the injector OWN selection flags.
+# ============================================================
+
+cmpu_b6_build_clear_all_selected_effect = {
+	debug_log = "CMPU_CLEAR_ALL_EXECUTED"
+	set_variable = { name = sakuya_b6_build_sel_advertising_agency value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_aeronautics_industry value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_airport value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_angkor_wat value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_appliance_manufactory value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_arms_industry value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_army_logistics_center value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_art_academy value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_artillery_foundry value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_automotive_industry value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_banana_plantation value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_bank value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_barrack value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_big_ben value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_brasilia value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_chemical_plant value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_chip_industry value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_coal_mine value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_coffee_plantation value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_company_headquarter value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_company_regional_headquarter value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_computer_industry value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_conscription_center value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_construction_sector value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_cotton_plantation value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_cristo_redentor value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_dye_plantation value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_eiffel_tower value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_electrics_industry value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_estacion_de_madrid_atocha value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_explosives_factory value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_financial_district value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_fishing_wharf value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_food_industry value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_food_service value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_forbidden_city value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_furniture_manufactory value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_glassworks value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_gold_field value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_gold_mine value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_government_administration value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_gran_teatro_de_la_habana value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_green_plant value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_hagia_sophia value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_iron_mine value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_lead_mine value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_livestock_ranch value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_logging_camp value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_machu_picchu value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_maize_farm value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_manila_cathedral_monument value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_manila_cathedral_original value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_manila_cathedral_ruins value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_manor_house value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_millet_farm value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_mosque_of_djenne value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_motor_industry value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_munition_plant value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_naval_administration value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_naval_fortification value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_naval_logistics_center value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_nuclear_plant value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_nuclear_silo value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_oil_rig value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_opium_plantation value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_ouro_preto value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_panama_canal value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_paper_mill value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_pena_convent value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_pena_palace value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_pharmaceutical_services value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_port value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_power_bloc_statue value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_power_plant value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_professional_service value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_railway value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_retail_services value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_rice_farm value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_rubber_plantation value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_rye_farm value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_saint_basils_cathedral value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_shipyard value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_silk_plantation value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_skyscraper value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_software_industry value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_spaceport value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_statue_of_liberty value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_steel_mill value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_suez_canal value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_sugar_plantation value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_sulfur_mine value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_synthetics_plant value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_taj_mahal value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_tea_plantation value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_teatro_amazonas value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_telecommunications value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_textile_mill value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_tobacco_plantation value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_tooling_workshop value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_trade_center value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_university value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_urban_center value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_vatican_city value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_victoria_terminus value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_vineyard value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_war_machine_industry value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_warehouse value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_whaling_station value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_wheat_farm value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_white_house value = 0 }
+	set_variable = { name = sakuya_b6_build_sel_world_trade_center value = 0 }
+}

@@ -1,0 +1,58 @@
+# ============================================================
+# CMPU UNIPOLAR PATCH - population generator confirmation
+# The Start buttons of the Population tab open this confirmation
+# first. The generator itself (sakuya_b6_popgen_*_effects) is
+# untouched - the same effects are executed on confirmation.
+# ============================================================
+
+cmpu_popgen_open_player = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		set_variable = { name = cmpu_popgen_mode_player value = 1 }
+		set_variable = { name = cmpu_popgen_confirm_open value = 1 }
+	}
+}
+
+cmpu_popgen_open_marked = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		set_variable = { name = cmpu_popgen_mode_marked value = 1 }
+		set_variable = { name = cmpu_popgen_confirm_open value = 1 }
+	}
+}
+
+cmpu_popgen_open_homeland = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		set_variable = { name = cmpu_popgen_mode_homeland value = 1 }
+		set_variable = { name = cmpu_popgen_confirm_open value = 1 }
+	}
+}
+
+cmpu_popgen_execute = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		if = { limit = { has_variable = cmpu_popgen_mode_player } sakuya_b6_popgen_spawn_to_player_marked_states_effect = yes }
+		if = { limit = { has_variable = cmpu_popgen_mode_marked } sakuya_b6_popgen_spawn_to_marked_country_states_effect = yes }
+		if = { limit = { has_variable = cmpu_popgen_mode_homeland } sakuya_b6_popgen_spawn_to_player_homeland_states_effect = yes }
+		remove_variable = cmpu_popgen_mode_player
+		remove_variable = cmpu_popgen_mode_marked
+		remove_variable = cmpu_popgen_mode_homeland
+		remove_variable = cmpu_popgen_confirm_open
+	}
+}
+
+cmpu_popgen_cancel = {
+	scope = country
+	is_shown = { is_player = yes }
+	effect = {
+		remove_variable = cmpu_popgen_mode_player
+		remove_variable = cmpu_popgen_mode_marked
+		remove_variable = cmpu_popgen_mode_homeland
+		remove_variable = cmpu_popgen_confirm_open
+	}
+}

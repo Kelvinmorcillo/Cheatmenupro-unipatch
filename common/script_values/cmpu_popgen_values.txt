@@ -1,0 +1,51 @@
+# ============================================================
+# CMPU UNIPOLAR PATCH - population generator summary values
+# Read-only: they only read the selections of the generator.
+# ============================================================
+
+cmpu_popgen_amount_sv = {
+	value = 0
+	if = { limit = { variable = { name = sakuya_b6_popgen_amount_index value = 1 } } add = 100 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_amount_index value = 2 } } add = 1000 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_amount_index value = 3 } } add = 5000 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_amount_index value = 4 } } add = 10000 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_amount_index value = 5 } } add = 25000 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_amount_index value = 6 } } add = 50000 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_amount_index value = 7 } } add = 100000 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_amount_index value = 8 } } add = 200000 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_amount_index value = 9 } } add = 500000 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_amount_index value = 10 } } add = 1000000 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_amount_index value = 11 } } add = 5000000 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_amount_index value = 12 } } add = 10000000 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_amount_index value = 13 } } add = 50000000 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_amount_index value = 14 } } add = 200000000 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_amount_index value = 15 } } add = 1000000000 }
+}
+
+cmpu_popgen_workforce_sv = {
+	value = 0
+	if = { limit = { variable = { name = sakuya_b6_popgen_workforce_index value = 1 } } add = 10 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_workforce_index value = 2 } } add = 20 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_workforce_index value = 3 } } add = 30 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_workforce_index value = 4 } } add = 40 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_workforce_index value = 5 } } add = 50 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_workforce_index value = 6 } } add = 60 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_workforce_index value = 7 } } add = 70 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_workforce_index value = 8 } } add = 80 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_workforce_index value = 9 } } add = 90 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_workforce_index value = 10 } } add = 100 }
+}
+
+cmpu_popgen_literacy_sv = {
+	value = 0
+	if = { limit = { variable = { name = sakuya_b6_popgen_literacy_index value = 1 } } add = 10 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_literacy_index value = 2 } } add = 20 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_literacy_index value = 3 } } add = 30 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_literacy_index value = 4 } } add = 40 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_literacy_index value = 5 } } add = 50 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_literacy_index value = 6 } } add = 60 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_literacy_index value = 7 } } add = 70 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_literacy_index value = 8 } } add = 80 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_literacy_index value = 9 } } add = 90 }
+	if = { limit = { variable = { name = sakuya_b6_popgen_literacy_index value = 10 } } add = 100 }
+}

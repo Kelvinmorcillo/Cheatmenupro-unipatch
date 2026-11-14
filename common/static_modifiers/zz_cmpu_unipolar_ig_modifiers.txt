@@ -1,0 +1,19 @@
+# ============================================================
+# CMPU UNIPOLAR PATCH - modifiers for the UNIPOLAR "Professionals"
+# interest group (the vanilla per-IG modifier types do not exist for it).
+# ============================================================
+
+cmpu_cheat_b5_professionals_approval = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_approval_add = 1
+}
+
+cmpu_cheat_b5_professionals_pol_str_mult = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_pol_str_mult = 1
+}
+
+cmpu_cheat_b5_professionals_pop_attraction_mult = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	interest_group_pop_attraction_mult = 1
+}

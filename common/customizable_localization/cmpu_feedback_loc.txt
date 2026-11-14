@@ -1,0 +1,174 @@
+# ============================================================
+# CMPU UNIPOLAR PATCH - ADDITIVE FEEDBACK CUSTOM LOC
+# Country-scope customizable localizations that pick a target
+# summary key based on the current marks. Read-only: triggers
+# only check state, never modify it.
+# Called from localization with [GetPlayer.GetCustom('name')].
+# All names are unique (cmpu_fb_ prefix).
+# ============================================================
+
+# Overall marked-target summary used by the always-visible panel.
+cmpu_fb_target_summary_desc = {
+	type = country
+
+	text = {
+		trigger = {
+			OR = {
+				any_scope_state = { has_decree = decree_sakuya_mark_state }
+				any_state = { has_variable = sakuya_mark_foreign_state_target }
+			}
+		}
+		localization_key = cmpu_fb_target_any
+	}
+	text = {
+		fallback = yes
+		localization_key = cmpu_fb_target_none
+	}
+}
+
+# Building injector: where the currently selected building will be applied.
+cmpu_fb_build_target_desc = {
+	type = country
+
+	text = {
+		trigger = {
+			AND = {
+				OR = {
+					has_variable = sakuya_b6_build_sel_war_machine_industry
+					has_variable = sakuya_b6_build_sel_chip_industry
+					has_variable = sakuya_b6_build_sel_computer_industry
+					has_variable = sakuya_b6_build_sel_appliance_manufactory
+					has_variable = sakuya_b6_build_sel_aeronautics_industry
+					has_variable = sakuya_b6_build_sel_army_logistics_center
+					has_variable = sakuya_b6_build_sel_nuclear_plant
+					has_variable = sakuya_b6_build_sel_green_plant
+					has_variable = sakuya_b6_build_sel_airport
+					has_variable = sakuya_b6_build_sel_spaceport
+					has_variable = sakuya_b6_build_sel_telecommunications
+					has_variable = sakuya_b6_build_sel_professional_service
+					has_variable = sakuya_b6_build_sel_bank
+					has_variable = sakuya_b6_build_sel_food_service
+					has_variable = sakuya_b6_build_sel_retail_services
+					has_variable = sakuya_b6_build_sel_advertising_agency
+					has_variable = sakuya_b6_build_sel_warehouse
+					has_variable = sakuya_b6_build_sel_pharmaceutical_services
+					has_variable = sakuya_b6_build_sel_software_industry
+					has_variable = sakuya_b6_build_sel_nuclear_silo
+					has_variable = sakuya_b6_build_sel_ouro_preto
+					has_variable = sakuya_b6_build_sel_teatro_amazonas
+					has_variable = sakuya_b6_build_sel_brasilia
+					has_variable = sakuya_b6_build_sel_world_trade_center
+				}
+				any_scope_state = { has_decree = decree_sakuya_mark_state }
+				any_state = { has_variable = sakuya_mark_foreign_state_target }
+			}
+		}
+		localization_key = cmpu_fb_build_target_both
+	}
+	text = {
+		trigger = {
+			AND = {
+				OR = {
+					has_variable = sakuya_b6_build_sel_war_machine_industry
+					has_variable = sakuya_b6_build_sel_chip_industry
+					has_variable = sakuya_b6_build_sel_computer_industry
+					has_variable = sakuya_b6_build_sel_appliance_manufactory
+					has_variable = sakuya_b6_build_sel_aeronautics_industry
+					has_variable = sakuya_b6_build_sel_army_logistics_center
+					has_variable = sakuya_b6_build_sel_nuclear_plant
+					has_variable = sakuya_b6_build_sel_green_plant
+					has_variable = sakuya_b6_build_sel_airport
+					has_variable = sakuya_b6_build_sel_spaceport
+					has_variable = sakuya_b6_build_sel_telecommunications
+					has_variable = sakuya_b6_build_sel_professional_service
+					has_variable = sakuya_b6_build_sel_bank
+					has_variable = sakuya_b6_build_sel_food_service
+					has_variable = sakuya_b6_build_sel_retail_services
+					has_variable = sakuya_b6_build_sel_advertising_agency
+					has_variable = sakuya_b6_build_sel_warehouse
+					has_variable = sakuya_b6_build_sel_pharmaceutical_services
+					has_variable = sakuya_b6_build_sel_software_industry
+					has_variable = sakuya_b6_build_sel_nuclear_silo
+					has_variable = sakuya_b6_build_sel_ouro_preto
+					has_variable = sakuya_b6_build_sel_teatro_amazonas
+					has_variable = sakuya_b6_build_sel_brasilia
+					has_variable = sakuya_b6_build_sel_world_trade_center
+				}
+				any_scope_state = { has_decree = decree_sakuya_mark_state }
+			}
+		}
+		localization_key = cmpu_fb_build_target_player
+	}
+	text = {
+		trigger = {
+			AND = {
+				OR = {
+					has_variable = sakuya_b6_build_sel_war_machine_industry
+					has_variable = sakuya_b6_build_sel_chip_industry
+					has_variable = sakuya_b6_build_sel_computer_industry
+					has_variable = sakuya_b6_build_sel_appliance_manufactory
+					has_variable = sakuya_b6_build_sel_aeronautics_industry
+					has_variable = sakuya_b6_build_sel_army_logistics_center
+					has_variable = sakuya_b6_build_sel_nuclear_plant
+					has_variable = sakuya_b6_build_sel_green_plant
+					has_variable = sakuya_b6_build_sel_airport
+					has_variable = sakuya_b6_build_sel_spaceport
+					has_variable = sakuya_b6_build_sel_telecommunications
+					has_variable = sakuya_b6_build_sel_professional_service
+					has_variable = sakuya_b6_build_sel_bank
+					has_variable = sakuya_b6_build_sel_food_service
+					has_variable = sakuya_b6_build_sel_retail_services
+					has_variable = sakuya_b6_build_sel_advertising_agency
+					has_variable = sakuya_b6_build_sel_warehouse
+					has_variable = sakuya_b6_build_sel_pharmaceutical_services
+					has_variable = sakuya_b6_build_sel_software_industry
+					has_variable = sakuya_b6_build_sel_nuclear_silo
+					has_variable = sakuya_b6_build_sel_ouro_preto
+					has_variable = sakuya_b6_build_sel_teatro_amazonas
+					has_variable = sakuya_b6_build_sel_brasilia
+					has_variable = sakuya_b6_build_sel_world_trade_center
+				}
+				any_state = { has_variable = sakuya_mark_foreign_state_target }
+			}
+		}
+		localization_key = cmpu_fb_build_target_foreign
+	}
+	text = {
+		fallback = yes
+		localization_key = cmpu_fb_build_target_none
+	}
+}
+
+# Population generation: which confirm path is currently possible
+# and what it would honestly do (one random state vs every state).
+cmpu_fb_popgen_target_desc = {
+	type = country
+
+	text = {
+		trigger = {
+			any_scope_state = { has_decree = decree_sakuya_mark_state }
+		}
+		localization_key = cmpu_fb_popgen_target_one_marked
+	}
+	text = {
+		trigger = {
+			any_scope_state = { is_homeland_of_country_cultures = root }
+		}
+		localization_key = cmpu_fb_popgen_target_every_homeland
+	}
+	text = {
+		trigger = {
+			any_state = {
+				has_variable = sakuya_mark_foreign_state_target
+				owner = {
+					has_variable = sakuya_mark_country_target
+				}
+			}
+		}
+		localization_key = cmpu_fb_popgen_target_one_foreign
+	}
+	text = {
+		fallback = yes
+		localization_key = cmpu_fb_popgen_target_none
+	}
+}
